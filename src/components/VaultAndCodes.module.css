@@ -1,0 +1,44 @@
+.wrapper { display: flex; flex-direction: column; gap: 14px; }
+.topRow { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+/* DB button in panel header */
+.dbPanelBtn {
+  font-family: var(--font-display); font-size: 0.8rem; letter-spacing: 1px;
+  background: var(--ink); color: var(--gold-light); border: 1px solid var(--gold);
+  padding: 3px 10px; cursor: pointer; transition: all 0.15s; white-space: nowrap;
+}
+.dbPanelBtn:hover { background: var(--gold); color: var(--ink); }
+
+/* Vault items */
+.itemList { display: flex; flex-direction: column; gap: 4px; margin-bottom: 8px; }
+.itemRow { display: flex; align-items: center; gap: 8px; padding: 5px 8px; background: var(--parchment-dark); border: 1px solid rgba(196,169,106,0.3); }
+.itemNum { font-family: var(--font-display); font-size: 1rem; color: var(--parchment-deep); min-width: 20px; }
+.itemInput { font-family: var(--font-italic); font-style: italic; font-size: 1rem; background: transparent; border: none; outline: none; color: var(--ink); flex: 1; }
+.itemInput::placeholder { color: var(--parchment-deep); }
+.removeBtn { font-family: var(--font-display); font-size: 0.9rem; background: transparent; border: none; color: var(--crimson); cursor: pointer; opacity: 0.5; padding: 2px 4px; flex-shrink: 0; }
+.removeBtn:hover { opacity: 1; }
+.addBtn { font-family: var(--font-display); font-size: 1rem; letter-spacing: 1px; background: transparent; border: 1px dashed var(--border); color: var(--ink-faded); padding: 7px; width: 100%; cursor: pointer; transition: all 0.15s; }
+.addBtn:hover { border-color: var(--sepia); color: var(--sepia); }
+
+/* Grimoire */
+.spellList { display: flex; flex-direction: column; gap: 5px; margin-bottom: 8px; }
+.emptyNote { font-family: var(--font-italic); font-style: italic; font-size: 1rem; color: var(--ink-faded); padding: 4px 0 8px; }
+.spellBlock { display: flex; flex-direction: column; background: var(--parchment-dark); border: 1px solid rgba(196,169,106,0.4); }
+.spellTop { display: flex; align-items: center; gap: 6px; padding: 6px 8px; }
+.spellName { font-family: var(--font-italic); font-style: italic; font-size: 1rem; font-weight: 600; background: transparent; border: none; outline: none; color: var(--ink); flex: 1; min-width: 0; }
+.spellName::placeholder { color: var(--parchment-deep); font-weight: 400; }
+.spellRecharge { font-family: var(--font-display); font-size: 0.78rem; color: var(--gold); white-space: nowrap; flex-shrink: 0; }
+.chargeBtn { font-family: var(--font-display); font-size: 0.8rem; padding: 3px 7px; border: 1px solid currentColor; cursor: pointer; background: transparent; letter-spacing: 0.5px; transition: all 0.15s; white-space: nowrap; flex-shrink: 0; }
+.charged { color: #2a6630; border-color: #2a6630; background: rgba(42,102,48,0.12); }
+.charged:hover { background: #2a6630; color: var(--parchment); }
+.drained { color: #8b5e3c; border-color: #8b5e3c; background: rgba(139,94,60,0.12); }
+.drained:hover { background: #8b5e3c; color: var(--parchment); }
+.expandBtn { font-family: var(--font-display); font-size: 0.75rem; background: transparent; border: none; color: var(--ink-faded); cursor: pointer; padding: 1px 3px; flex-shrink: 0; }
+.expandBtn:hover { color: var(--sepia); }
+.spellDescExpanded { font-family: var(--font-italic); font-style: italic; font-size: 0.88rem; color: var(--ink-light); padding: 5px 10px 8px; border-top: 1px dashed rgba(196,169,106,0.3); line-height: 1.5; }
+
+/* Codes */
+.codesGrid { display: grid; grid-template-columns: repeat(20, 1fr); gap: 3px; }
+.codePip { font-family: var(--font-display); font-size: 0.6rem; aspect-ratio: 1; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(196,169,106,0.35); cursor: pointer; transition: all 0.12s; color: var(--ink-faded); background: var(--parchment-dark); padding: 0; line-height: 1; }
+.codePip:hover:not(.circled) { border-color: var(--sepia); color: var(--sepia); }
+.circled { background: var(--ink); color: var(--gold-light); border-color: var(--gold); }

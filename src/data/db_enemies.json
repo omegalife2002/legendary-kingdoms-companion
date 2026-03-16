@@ -1,0 +1,1466 @@
+[
+  {
+    "name": "1st Barbarian (entry 587)",
+    "attack": 4,
+    "atkDC": 4,
+    "def": 3,
+    "health": 9,
+    "maxHealth": 9
+  },
+  {
+    "name": "1st Barbarian (entry 666)",
+    "attack": 4,
+    "atkDC": 4,
+    "def": 3,
+    "health": 9,
+    "maxHealth": 9
+  },
+  {
+    "name": "1st Bronzeguard (entry 58)",
+    "attack": 8,
+    "atkDC": 4,
+    "def": 5,
+    "health": 12,
+    "maxHealth": 12
+  },
+  {
+    "name": "1st Ghoul",
+    "attack": 6,
+    "atkDC": 4,
+    "def": 4,
+    "health": 13,
+    "maxHealth": 13
+  },
+  {
+    "name": "1st Giant Skeleton",
+    "attack": 8,
+    "atkDC": 3,
+    "def": 5,
+    "health": 30,
+    "maxHealth": 30
+  },
+  {
+    "name": "1st Goblin (entry 389)",
+    "attack": 2,
+    "atkDC": 4,
+    "def": 4,
+    "health": 3,
+    "maxHealth": 3
+  },
+  {
+    "name": "1st Guard (entry 529)",
+    "attack": 4,
+    "atkDC": 4,
+    "def": 4,
+    "health": 7,
+    "maxHealth": 7
+  },
+  {
+    "name": "1st Kensai",
+    "attack": 6,
+    "atkDC": 4,
+    "def": 4,
+    "health": 9,
+    "maxHealth": 9
+  },
+  {
+    "name": "1st Monkey (Unbraaki's)",
+    "attack": 0,
+    "atkDC": 4,
+    "def": 5,
+    "health": 3,
+    "maxHealth": 3
+  },
+  {
+    "name": "1st Nomad",
+    "attack": 3,
+    "atkDC": 4,
+    "def": 4,
+    "health": 7,
+    "maxHealth": 7
+  },
+  {
+    "name": "1st Orc (entry 2)",
+    "attack": 6,
+    "atkDC": 4,
+    "def": 4,
+    "health": 8,
+    "maxHealth": 8
+  },
+  {
+    "name": "1st Orc (entry 213)",
+    "attack": 4,
+    "atkDC": 4,
+    "def": 4,
+    "health": 9,
+    "maxHealth": 9
+  },
+  {
+    "name": "1st Orc (entry 604)",
+    "attack": 5,
+    "atkDC": 4,
+    "def": 4,
+    "health": 8,
+    "maxHealth": 8
+  },
+  {
+    "name": "1st Orc (entry 723)",
+    "attack": 5,
+    "atkDC": 4,
+    "def": 4,
+    "health": 8,
+    "maxHealth": 8
+  },
+  {
+    "name": "1st Orc (entry 885)",
+    "attack": 5,
+    "atkDC": 4,
+    "def": 4,
+    "health": 8,
+    "maxHealth": 8
+  },
+  {
+    "name": "1st Panther",
+    "attack": 5,
+    "atkDC": 4,
+    "def": 4,
+    "health": 6,
+    "maxHealth": 6
+  },
+  {
+    "name": "1st Sand Drake",
+    "attack": 6,
+    "atkDC": 5,
+    "def": 4,
+    "health": 12,
+    "maxHealth": 12
+  },
+  {
+    "name": "1st Sand Lizard (entry 255)",
+    "attack": 4,
+    "atkDC": 3,
+    "def": 4,
+    "health": 7,
+    "maxHealth": 7
+  },
+  {
+    "name": "1st Sand Lizard (entry 356)",
+    "attack": 6,
+    "atkDC": 3,
+    "def": 4,
+    "health": 8,
+    "maxHealth": 8
+  },
+  {
+    "name": "1st Scorpion",
+    "attack": 5,
+    "atkDC": 4,
+    "def": 4,
+    "health": 5,
+    "maxHealth": 5
+  },
+  {
+    "name": "1st Snakeman (entry 150)",
+    "attack": 3,
+    "atkDC": 4,
+    "def": 3,
+    "health": 7,
+    "maxHealth": 7
+  },
+  {
+    "name": "1st Snakeman (entry 497)",
+    "attack": 4,
+    "atkDC": 5,
+    "def": 6,
+    "health": 6,
+    "maxHealth": 6
+  },
+  {
+    "name": "1st Snakeman (entry 538)",
+    "attack": 4,
+    "atkDC": 4,
+    "def": 3,
+    "health": 5,
+    "maxHealth": 5
+  },
+  {
+    "name": "1st Snakeman (entry 708)",
+    "attack": 5,
+    "atkDC": 4,
+    "def": 3,
+    "health": 8,
+    "maxHealth": 8
+  },
+  {
+    "name": "1st Soldier (entry 554)",
+    "attack": 3,
+    "atkDC": 4,
+    "def": 4,
+    "health": 6,
+    "maxHealth": 6
+  },
+  {
+    "name": "1st Troglodyte (entry 296)",
+    "attack": 4,
+    "atkDC": 3,
+    "def": 4,
+    "health": 8,
+    "maxHealth": 8
+  },
+  {
+    "name": "1st Troglodyte (entry 446)",
+    "attack": 3,
+    "atkDC": 3,
+    "def": 4,
+    "health": 5,
+    "maxHealth": 5
+  },
+  {
+    "name": "1st Troglodyte (entry 739)",
+    "attack": 2,
+    "atkDC": 3,
+    "def": 4,
+    "health": 4,
+    "maxHealth": 4
+  },
+  {
+    "name": "1st Warhound",
+    "attack": 4,
+    "atkDC": 4,
+    "def": 4,
+    "health": 5,
+    "maxHealth": 5
+  },
+  {
+    "name": "1st Zealot (entry 32)",
+    "attack": 3,
+    "atkDC": 4,
+    "def": 4,
+    "health": 10,
+    "maxHealth": 10
+  },
+  {
+    "name": "1st Zealot (entry 636)",
+    "attack": 4,
+    "atkDC": 4,
+    "def": 4,
+    "health": 6,
+    "maxHealth": 6
+  },
+  {
+    "name": "2nd Barbarian (entry 587)",
+    "attack": 3,
+    "atkDC": 4,
+    "def": 3,
+    "health": 8,
+    "maxHealth": 8
+  },
+  {
+    "name": "2nd Barbarian (entry 666)",
+    "attack": 3,
+    "atkDC": 4,
+    "def": 3,
+    "health": 8,
+    "maxHealth": 8
+  },
+  {
+    "name": "2nd Bronzeguard (entry 58)",
+    "attack": 9,
+    "atkDC": 4,
+    "def": 5,
+    "health": 10,
+    "maxHealth": 10
+  },
+  {
+    "name": "2nd Ghoul",
+    "attack": 5,
+    "atkDC": 4,
+    "def": 4,
+    "health": 13,
+    "maxHealth": 13
+  },
+  {
+    "name": "2nd Giant Skeleton",
+    "attack": 10,
+    "atkDC": 3,
+    "def": 4,
+    "health": 25,
+    "maxHealth": 25
+  },
+  {
+    "name": "2nd Goblin (entry 389)",
+    "attack": 3,
+    "atkDC": 4,
+    "def": 4,
+    "health": 5,
+    "maxHealth": 5
+  },
+  {
+    "name": "2nd Guard (entry 529)",
+    "attack": 4,
+    "atkDC": 4,
+    "def": 3,
+    "health": 9,
+    "maxHealth": 9
+  },
+  {
+    "name": "2nd Kensai",
+    "attack": 7,
+    "atkDC": 4,
+    "def": 4,
+    "health": 8,
+    "maxHealth": 8
+  },
+  {
+    "name": "2nd Monkey (Unbraaki's)",
+    "attack": 0,
+    "atkDC": 4,
+    "def": 5,
+    "health": 4,
+    "maxHealth": 4
+  },
+  {
+    "name": "2nd Nomad",
+    "attack": 4,
+    "atkDC": 4,
+    "def": 4,
+    "health": 8,
+    "maxHealth": 8
+  },
+  {
+    "name": "2nd Orc (entry 2)",
+    "attack": 4,
+    "atkDC": 4,
+    "def": 3,
+    "health": 9,
+    "maxHealth": 9
+  },
+  {
+    "name": "2nd Orc (entry 213)",
+    "attack": 5,
+    "atkDC": 4,
+    "def": 4,
+    "health": 11,
+    "maxHealth": 11
+  },
+  {
+    "name": "2nd Orc (entry 604)",
+    "attack": 5,
+    "atkDC": 4,
+    "def": 4,
+    "health": 9,
+    "maxHealth": 9
+  },
+  {
+    "name": "2nd Orc (entry 723)",
+    "attack": 5,
+    "atkDC": 4,
+    "def": 4,
+    "health": 9,
+    "maxHealth": 9
+  },
+  {
+    "name": "2nd Orc (entry 885)",
+    "attack": 5,
+    "atkDC": 4,
+    "def": 4,
+    "health": 9,
+    "maxHealth": 9
+  },
+  {
+    "name": "2nd Panther",
+    "attack": 4,
+    "atkDC": 4,
+    "def": 4,
+    "health": 7,
+    "maxHealth": 7
+  },
+  {
+    "name": "2nd Sand Drake",
+    "attack": 5,
+    "atkDC": 5,
+    "def": 4,
+    "health": 11,
+    "maxHealth": 11
+  },
+  {
+    "name": "2nd Sand Lizard (entry 255)",
+    "attack": 4,
+    "atkDC": 3,
+    "def": 4,
+    "health": 9,
+    "maxHealth": 9
+  },
+  {
+    "name": "2nd Sand Lizard (entry 356)",
+    "attack": 4,
+    "atkDC": 3,
+    "def": 4,
+    "health": 9,
+    "maxHealth": 9
+  },
+  {
+    "name": "2nd Scorpion",
+    "attack": 4,
+    "atkDC": 4,
+    "def": 4,
+    "health": 4,
+    "maxHealth": 4
+  },
+  {
+    "name": "2nd Snakeman (entry 150)",
+    "attack": 4,
+    "atkDC": 4,
+    "def": 3,
+    "health": 7,
+    "maxHealth": 7
+  },
+  {
+    "name": "2nd Snakeman (entry 497)",
+    "attack": 4,
+    "atkDC": 5,
+    "def": 6,
+    "health": 5,
+    "maxHealth": 5
+  },
+  {
+    "name": "2nd Snakeman (entry 538)",
+    "attack": 4,
+    "atkDC": 4,
+    "def": 3,
+    "health": 8,
+    "maxHealth": 8
+  },
+  {
+    "name": "2nd Snakeman (entry 708)",
+    "attack": 4,
+    "atkDC": 4,
+    "def": 3,
+    "health": 8,
+    "maxHealth": 8
+  },
+  {
+    "name": "2nd Soldier (entry 554)",
+    "attack": 3,
+    "atkDC": 4,
+    "def": 3,
+    "health": 7,
+    "maxHealth": 7
+  },
+  {
+    "name": "2nd Troglodyte (entry 296)",
+    "attack": 2,
+    "atkDC": 3,
+    "def": 4,
+    "health": 4,
+    "maxHealth": 4
+  },
+  {
+    "name": "2nd Troglodyte (entry 446)",
+    "attack": 2,
+    "atkDC": 3,
+    "def": 4,
+    "health": 3,
+    "maxHealth": 3
+  },
+  {
+    "name": "2nd Troglodyte (entry 739)",
+    "attack": 3,
+    "atkDC": 3,
+    "def": 4,
+    "health": 3,
+    "maxHealth": 3
+  },
+  {
+    "name": "2nd Warhound",
+    "attack": 3,
+    "atkDC": 4,
+    "def": 4,
+    "health": 4,
+    "maxHealth": 4
+  },
+  {
+    "name": "2nd Zealot (entry 32)",
+    "attack": 4,
+    "atkDC": 4,
+    "def": 4,
+    "health": 11,
+    "maxHealth": 11
+  },
+  {
+    "name": "2nd Zealot (entry 636)",
+    "attack": 5,
+    "atkDC": 4,
+    "def": 4,
+    "health": 5,
+    "maxHealth": 5
+  },
+  {
+    "name": "3rd Barbarian (entry 587)",
+    "attack": 4,
+    "atkDC": 4,
+    "def": 3,
+    "health": 8,
+    "maxHealth": 8
+  },
+  {
+    "name": "3rd Bronzeguard (entry 58)",
+    "attack": 7,
+    "atkDC": 4,
+    "def": 5,
+    "health": 11,
+    "maxHealth": 11
+  },
+  {
+    "name": "3rd Ghoul",
+    "attack": 5,
+    "atkDC": 4,
+    "def": 4,
+    "health": 14,
+    "maxHealth": 14
+  },
+  {
+    "name": "3rd Goblin (entry 389)",
+    "attack": 2,
+    "atkDC": 4,
+    "def": 4,
+    "health": 4,
+    "maxHealth": 4
+  },
+  {
+    "name": "3rd Guard (entry 529)",
+    "attack": 5,
+    "atkDC": 5,
+    "def": 4,
+    "health": 11,
+    "maxHealth": 11
+  },
+  {
+    "name": "3rd Kensai",
+    "attack": 6,
+    "atkDC": 4,
+    "def": 4,
+    "health": 10,
+    "maxHealth": 10
+  },
+  {
+    "name": "3rd Monkey (Unbraaki's)",
+    "attack": 0,
+    "atkDC": 4,
+    "def": 5,
+    "health": 3,
+    "maxHealth": 3
+  },
+  {
+    "name": "3rd Nomad",
+    "attack": 4,
+    "atkDC": 4,
+    "def": 4,
+    "health": 6,
+    "maxHealth": 6
+  },
+  {
+    "name": "3rd Orc (entry 213)",
+    "attack": 4,
+    "atkDC": 4,
+    "def": 4,
+    "health": 10,
+    "maxHealth": 10
+  },
+  {
+    "name": "3rd Orc (entry 604)",
+    "attack": 4,
+    "atkDC": 4,
+    "def": 4,
+    "health": 11,
+    "maxHealth": 11
+  },
+  {
+    "name": "3rd Orc (entry 723)",
+    "attack": 4,
+    "atkDC": 4,
+    "def": 4,
+    "health": 11,
+    "maxHealth": 11
+  },
+  {
+    "name": "3rd Orc (entry 885)",
+    "attack": 4,
+    "atkDC": 4,
+    "def": 4,
+    "health": 11,
+    "maxHealth": 11
+  },
+  {
+    "name": "3rd Sand Lizard (entry 356)",
+    "attack": 5,
+    "atkDC": 3,
+    "def": 4,
+    "health": 10,
+    "maxHealth": 10
+  },
+  {
+    "name": "3rd Scorpion",
+    "attack": 4,
+    "atkDC": 4,
+    "def": 4,
+    "health": 3,
+    "maxHealth": 3
+  },
+  {
+    "name": "3rd Snakeman (entry 150)",
+    "attack": 4,
+    "atkDC": 4,
+    "def": 3,
+    "health": 5,
+    "maxHealth": 5
+  },
+  {
+    "name": "3rd Snakeman (entry 538)",
+    "attack": 4,
+    "atkDC": 4,
+    "def": 3,
+    "health": 4,
+    "maxHealth": 4
+  },
+  {
+    "name": "3rd Snakeman (entry 708)",
+    "attack": 3,
+    "atkDC": 4,
+    "def": 3,
+    "health": 7,
+    "maxHealth": 7
+  },
+  {
+    "name": "3rd Soldier (entry 554)",
+    "attack": 4,
+    "atkDC": 4,
+    "def": 3,
+    "health": 9,
+    "maxHealth": 9
+  },
+  {
+    "name": "3rd Troglodyte (entry 296)",
+    "attack": 3,
+    "atkDC": 3,
+    "def": 4,
+    "health": 3,
+    "maxHealth": 3
+  },
+  {
+    "name": "3rd Troglodyte (entry 446)",
+    "attack": 2,
+    "atkDC": 3,
+    "def": 4,
+    "health": 3,
+    "maxHealth": 3
+  },
+  {
+    "name": "3rd Troglodyte (entry 739)",
+    "attack": 2,
+    "atkDC": 3,
+    "def": 4,
+    "health": 3,
+    "maxHealth": 3
+  },
+  {
+    "name": "3rd Warhound",
+    "attack": 4,
+    "atkDC": 4,
+    "def": 4,
+    "health": 6,
+    "maxHealth": 6
+  },
+  {
+    "name": "3rd Zealot (entry 32)",
+    "attack": 3,
+    "atkDC": 4,
+    "def": 4,
+    "health": 10,
+    "maxHealth": 10
+  },
+  {
+    "name": "3rd Zealot (entry 636)",
+    "attack": 5,
+    "atkDC": 4,
+    "def": 4,
+    "health": 5,
+    "maxHealth": 5
+  },
+  {
+    "name": "4th Kensai",
+    "attack": 6,
+    "atkDC": 4,
+    "def": 4,
+    "health": 9,
+    "maxHealth": 9
+  },
+  {
+    "name": "4th Monkey (Unbraaki's)",
+    "attack": 0,
+    "atkDC": 4,
+    "def": 5,
+    "health": 5,
+    "maxHealth": 5
+  },
+  {
+    "name": "4th Orc (entry 213)",
+    "attack": 3,
+    "atkDC": 4,
+    "def": 4,
+    "health": 10,
+    "maxHealth": 10
+  },
+  {
+    "name": "4th Orc (entry 604)",
+    "attack": 6,
+    "atkDC": 5,
+    "def": 3,
+    "health": 10,
+    "maxHealth": 10
+  },
+  {
+    "name": "4th Snakeman (entry 150)",
+    "attack": 3,
+    "atkDC": 4,
+    "def": 3,
+    "health": 5,
+    "maxHealth": 5
+  },
+  {
+    "name": "4th Snakeman (entry 538)",
+    "attack": 3,
+    "atkDC": 4,
+    "def": 3,
+    "health": 6,
+    "maxHealth": 6
+  },
+  {
+    "name": "4th Snakeman (entry 708)",
+    "attack": 3,
+    "atkDC": 4,
+    "def": 3,
+    "health": 5,
+    "maxHealth": 5
+  },
+  {
+    "name": "4th Soldier (entry 554)",
+    "attack": 3,
+    "atkDC": 4,
+    "def": 4,
+    "health": 8,
+    "maxHealth": 8
+  },
+  {
+    "name": "4th Troglodyte (entry 296)",
+    "attack": 3,
+    "atkDC": 3,
+    "def": 4,
+    "health": 3,
+    "maxHealth": 3
+  },
+  {
+    "name": "4th Troglodyte (entry 446)",
+    "attack": 3,
+    "atkDC": 3,
+    "def": 4,
+    "health": 4,
+    "maxHealth": 4
+  },
+  {
+    "name": "5th Orc (entry 213)",
+    "attack": 4,
+    "atkDC": 4,
+    "def": 4,
+    "health": 6,
+    "maxHealth": 6
+  },
+  {
+    "name": "5th Orc (entry 604)",
+    "attack": 4,
+    "atkDC": 4,
+    "def": 4,
+    "health": 7,
+    "maxHealth": 7
+  },
+  {
+    "name": "5th Troglodyte (entry 296)",
+    "attack": 2,
+    "atkDC": 3,
+    "def": 4,
+    "health": 5,
+    "maxHealth": 5
+  },
+  {
+    "name": "Agile Gladiator",
+    "attack": 6,
+    "atkDC": 3,
+    "def": 5,
+    "health": 6,
+    "maxHealth": 6
+  },
+  {
+    "name": "Assassin (entry 648)",
+    "attack": 4,
+    "atkDC": 4,
+    "def": 4,
+    "health": 7,
+    "maxHealth": 7
+  },
+  {
+    "name": "Barbarian Leader (entry 238)",
+    "attack": 4,
+    "atkDC": 4,
+    "def": 4,
+    "health": 7,
+    "maxHealth": 7
+  },
+  {
+    "name": "Barbarian Leader (entry 308)",
+    "attack": 4,
+    "atkDC": 4,
+    "def": 3,
+    "health": 8,
+    "maxHealth": 8
+  },
+  {
+    "name": "Barbarians (entry 308)",
+    "attack": 6,
+    "atkDC": 4,
+    "def": 3,
+    "health": 15,
+    "maxHealth": 15
+  },
+  {
+    "name": "Beetle Swarm",
+    "attack": 0,
+    "atkDC": 4,
+    "def": 3,
+    "health": 25,
+    "maxHealth": 25
+  },
+  {
+    "name": "Berserker",
+    "attack": 7,
+    "atkDC": 4,
+    "def": 3,
+    "health": 12,
+    "maxHealth": 12
+  },
+  {
+    "name": "Black Spider (entry 133)",
+    "attack": 5,
+    "atkDC": 5,
+    "def": 4,
+    "health": 6,
+    "maxHealth": 6
+  },
+  {
+    "name": "Black Spider (entry 237)",
+    "attack": 5,
+    "atkDC": 5,
+    "def": 4,
+    "health": 7,
+    "maxHealth": 7
+  },
+  {
+    "name": "Brekken",
+    "attack": 5,
+    "atkDC": 4,
+    "def": 4,
+    "health": 9,
+    "maxHealth": 9
+  },
+  {
+    "name": "Bronzeguard (entry 706)",
+    "attack": 8,
+    "atkDC": 4,
+    "def": 5,
+    "health": 12,
+    "maxHealth": 12
+  },
+  {
+    "name": "Bronzeguard (final battle)",
+    "attack": 9,
+    "atkDC": 4,
+    "def": 5,
+    "health": 12,
+    "maxHealth": 12
+  },
+  {
+    "name": "Brute",
+    "attack": 2,
+    "atkDC": 5,
+    "def": 3,
+    "health": 6,
+    "maxHealth": 6
+  },
+  {
+    "name": "Chalice Swordsmen",
+    "attack": 5,
+    "atkDC": 4,
+    "def": 4,
+    "health": 10,
+    "maxHealth": 10
+  },
+  {
+    "name": "Cursite Assassin",
+    "attack": 4,
+    "atkDC": 3,
+    "def": 5,
+    "health": 7,
+    "maxHealth": 7
+  },
+  {
+    "name": "Daisy (ogre)",
+    "attack": 9,
+    "atkDC": 4,
+    "def": 4,
+    "health": 13,
+    "maxHealth": 13
+  },
+  {
+    "name": "Dragonyak Bull",
+    "attack": 6,
+    "atkDC": 3,
+    "def": 4,
+    "health": 15,
+    "maxHealth": 15
+  },
+  {
+    "name": "Dragonyakman",
+    "attack": 6,
+    "atkDC": 5,
+    "def": 3,
+    "health": 15,
+    "maxHealth": 15
+  },
+  {
+    "name": "Dulcimer",
+    "attack": 4,
+    "atkDC": 4,
+    "def": 4,
+    "health": 8,
+    "maxHealth": 8
+  },
+  {
+    "name": "Fastilon",
+    "attack": 8,
+    "atkDC": 2,
+    "def": 6,
+    "health": 40,
+    "maxHealth": 40
+  },
+  {
+    "name": "First Guard (entry 409)",
+    "attack": 4,
+    "atkDC": 4,
+    "def": 4,
+    "health": 8,
+    "maxHealth": 8
+  },
+  {
+    "name": "First Guard (entry 481)",
+    "attack": 4,
+    "atkDC": 4,
+    "def": 4,
+    "health": 8,
+    "maxHealth": 8
+  },
+  {
+    "name": "First Lion",
+    "attack": 4,
+    "atkDC": 4,
+    "def": 4,
+    "health": 9,
+    "maxHealth": 9
+  },
+  {
+    "name": "Goblin",
+    "attack": 4,
+    "atkDC": 5,
+    "def": 4,
+    "health": 6,
+    "maxHealth": 6
+  },
+  {
+    "name": "Goblin Archers (entry 846)",
+    "attack": 0,
+    "atkDC": 4,
+    "def": 4,
+    "health": 8,
+    "maxHealth": 8
+  },
+  {
+    "name": "Goblins (entry 885)",
+    "attack": 7,
+    "atkDC": 5,
+    "def": 4,
+    "health": 10,
+    "maxHealth": 10
+  },
+  {
+    "name": "Green Skeletons",
+    "attack": 8,
+    "atkDC": 4,
+    "def": 3,
+    "health": 30,
+    "maxHealth": 30
+  },
+  {
+    "name": "Green Spider (entry 133)",
+    "attack": 5,
+    "atkDC": 5,
+    "def": 4,
+    "health": 5,
+    "maxHealth": 5
+  },
+  {
+    "name": "Green Spider (entry 237)",
+    "attack": 5,
+    "atkDC": 5,
+    "def": 4,
+    "health": 6,
+    "maxHealth": 6
+  },
+  {
+    "name": "Grey Spider (entry 133)",
+    "attack": 4,
+    "atkDC": 5,
+    "def": 4,
+    "health": 6,
+    "maxHealth": 6
+  },
+  {
+    "name": "Grey Spider (entry 237)",
+    "attack": 4,
+    "atkDC": 5,
+    "def": 4,
+    "health": 7,
+    "maxHealth": 7
+  },
+  {
+    "name": "Grim Gladiator",
+    "attack": 8,
+    "atkDC": 4,
+    "def": 4,
+    "health": 12,
+    "maxHealth": 12
+  },
+  {
+    "name": "Imopposh the Mad",
+    "attack": 3,
+    "atkDC": 4,
+    "def": 4,
+    "health": 30,
+    "maxHealth": 30
+  },
+  {
+    "name": "Jungle",
+    "attack": 0,
+    "atkDC": 4,
+    "def": 4,
+    "health": 25,
+    "maxHealth": 25
+  },
+  {
+    "name": "Kensai (duel)",
+    "attack": 6,
+    "atkDC": 4,
+    "def": 4,
+    "health": 9,
+    "maxHealth": 9
+  },
+  {
+    "name": "Kensai Master",
+    "attack": 8,
+    "atkDC": 3,
+    "def": 5,
+    "health": 11,
+    "maxHealth": 11
+  },
+  {
+    "name": "Leader (arena entry 838)",
+    "attack": 3,
+    "atkDC": 5,
+    "def": 4,
+    "health": 5,
+    "maxHealth": 5
+  },
+  {
+    "name": "Lhasbreath Barbarians (entry 238)",
+    "attack": 9,
+    "atkDC": 5,
+    "def": 3,
+    "health": 16,
+    "maxHealth": 16
+  },
+  {
+    "name": "Lhasbreth Barbarians (entry 101)",
+    "attack": 7,
+    "atkDC": 5,
+    "def": 3,
+    "health": 17,
+    "maxHealth": 17
+  },
+  {
+    "name": "Lotor the Blademaster",
+    "attack": 5,
+    "atkDC": 3,
+    "def": 4,
+    "health": 18,
+    "maxHealth": 18
+  },
+  {
+    "name": "Malronac the Deathengine",
+    "attack": 6,
+    "atkDC": 3,
+    "def": 4,
+    "health": 30,
+    "maxHealth": 30
+  },
+  {
+    "name": "Malronac the Deathengine (solo)",
+    "attack": 6,
+    "atkDC": 3,
+    "def": 4,
+    "health": 30,
+    "maxHealth": 30
+  },
+  {
+    "name": "Mighty Gladiator",
+    "attack": 5,
+    "atkDC": 3,
+    "def": 4,
+    "health": 10,
+    "maxHealth": 10
+  },
+  {
+    "name": "Monk Statue",
+    "attack": 4,
+    "atkDC": 5,
+    "def": 5,
+    "health": 30,
+    "maxHealth": 30
+  },
+  {
+    "name": "Monks",
+    "attack": 5,
+    "atkDC": 4,
+    "def": 4,
+    "health": 8,
+    "maxHealth": 8
+  },
+  {
+    "name": "Naga",
+    "attack": 5,
+    "atkDC": 3,
+    "def": 6,
+    "health": 10,
+    "maxHealth": 10
+  },
+  {
+    "name": "Nasty Goblins",
+    "attack": 7,
+    "atkDC": 5,
+    "def": 4,
+    "health": 10,
+    "maxHealth": 10
+  },
+  {
+    "name": "Orc Bodyguard",
+    "attack": 6,
+    "atkDC": 4,
+    "def": 4,
+    "health": 10,
+    "maxHealth": 10
+  },
+  {
+    "name": "Orc Leader (entry 213)",
+    "attack": 7,
+    "atkDC": 4,
+    "def": 4,
+    "health": 14,
+    "maxHealth": 14
+  },
+  {
+    "name": "Orc Leader (entry 723)",
+    "attack": 7,
+    "atkDC": 4,
+    "def": 4,
+    "health": 14,
+    "maxHealth": 14
+  },
+  {
+    "name": "Orc Leader (entry 885)",
+    "attack": 7,
+    "atkDC": 4,
+    "def": 4,
+    "health": 14,
+    "maxHealth": 14
+  },
+  {
+    "name": "Paper Dragon",
+    "attack": 6,
+    "atkDC": 4,
+    "def": 4,
+    "health": 8,
+    "maxHealth": 8
+  },
+  {
+    "name": "Paper Golems",
+    "attack": 4,
+    "atkDC": 4,
+    "def": 4,
+    "health": 10,
+    "maxHealth": 10
+  },
+  {
+    "name": "Paper Tiger",
+    "attack": 5,
+    "atkDC": 4,
+    "def": 4,
+    "health": 6,
+    "maxHealth": 6
+  },
+  {
+    "name": "Red Spider (entry 133)",
+    "attack": 4,
+    "atkDC": 5,
+    "def": 4,
+    "health": 4,
+    "maxHealth": 4
+  },
+  {
+    "name": "Red Spider (entry 237)",
+    "attack": 4,
+    "atkDC": 5,
+    "def": 4,
+    "health": 5,
+    "maxHealth": 5
+  },
+  {
+    "name": "Revenant",
+    "attack": 6,
+    "atkDC": 3,
+    "def": 5,
+    "health": 8,
+    "maxHealth": 8
+  },
+  {
+    "name": "Salt Dragon",
+    "attack": 10,
+    "atkDC": 5,
+    "def": 4,
+    "health": 40,
+    "maxHealth": 40
+  },
+  {
+    "name": "Saltdad Slaves (entry 550)",
+    "attack": 6,
+    "atkDC": 5,
+    "def": 3,
+    "health": 20,
+    "maxHealth": 20
+  },
+  {
+    "name": "Second Guard (entry 409)",
+    "attack": 3,
+    "atkDC": 4,
+    "def": 4,
+    "health": 7,
+    "maxHealth": 7
+  },
+  {
+    "name": "Second Guard (entry 481)",
+    "attack": 3,
+    "atkDC": 4,
+    "def": 4,
+    "health": 7,
+    "maxHealth": 7
+  },
+  {
+    "name": "Second Lion",
+    "attack": 3,
+    "atkDC": 4,
+    "def": 4,
+    "health": 10,
+    "maxHealth": 10
+  },
+  {
+    "name": "Sgt Kheller",
+    "attack": 5,
+    "atkDC": 4,
+    "def": 4,
+    "health": 7,
+    "maxHealth": 7
+  },
+  {
+    "name": "Sgt Tacitus",
+    "attack": 5,
+    "atkDC": 4,
+    "def": 4,
+    "health": 6,
+    "maxHealth": 6
+  },
+  {
+    "name": "Skallos",
+    "attack": 9,
+    "atkDC": 4,
+    "def": 5,
+    "health": 20,
+    "maxHealth": 20
+  },
+  {
+    "name": "Skeleton Archers",
+    "attack": 0,
+    "atkDC": 4,
+    "def": 4,
+    "health": 13,
+    "maxHealth": 13
+  },
+  {
+    "name": "Skeleton Warriors",
+    "attack": 9,
+    "atkDC": 4,
+    "def": 4,
+    "health": 12,
+    "maxHealth": 12
+  },
+  {
+    "name": "Skeletons (entry 457)",
+    "attack": 5,
+    "atkDC": 5,
+    "def": 4,
+    "health": 24,
+    "maxHealth": 24
+  },
+  {
+    "name": "Skeletons (entry 659)",
+    "attack": 6,
+    "atkDC": 5,
+    "def": 4,
+    "health": 12,
+    "maxHealth": 12
+  },
+  {
+    "name": "Skullcracker (ogre)",
+    "attack": 8,
+    "atkDC": 4,
+    "def": 4,
+    "health": 12,
+    "maxHealth": 12
+  },
+  {
+    "name": "Slaves (arena entry 838)",
+    "attack": 4,
+    "atkDC": 5,
+    "def": 3,
+    "health": 15,
+    "maxHealth": 15
+  },
+  {
+    "name": "Snakeman Champion",
+    "attack": 6,
+    "atkDC": 4,
+    "def": 3,
+    "health": 12,
+    "maxHealth": 12
+  },
+  {
+    "name": "Snakeman Priest",
+    "attack": 4,
+    "atkDC": 4,
+    "def": 3,
+    "health": 16,
+    "maxHealth": 16
+  },
+  {
+    "name": "Sorcerer (entry 636)",
+    "attack": 3,
+    "atkDC": 5,
+    "def": 4,
+    "health": 11,
+    "maxHealth": 11
+  },
+  {
+    "name": "The Iron King",
+    "attack": 6,
+    "atkDC": 4,
+    "def": 4,
+    "health": 15,
+    "maxHealth": 15
+  },
+  {
+    "name": "Thief of Royce",
+    "attack": 5,
+    "atkDC": 4,
+    "def": 4,
+    "health": 14,
+    "maxHealth": 14
+  },
+  {
+    "name": "Thieves (entry 889)",
+    "attack": 10,
+    "atkDC": 5,
+    "def": 3,
+    "health": 20,
+    "maxHealth": 20
+  },
+  {
+    "name": "Tommul",
+    "attack": 3,
+    "atkDC": 5,
+    "def": 4,
+    "health": 7,
+    "maxHealth": 7
+  },
+  {
+    "name": "Ugly Goblins",
+    "attack": 6,
+    "atkDC": 5,
+    "def": 4,
+    "health": 11,
+    "maxHealth": 11
+  },
+  {
+    "name": "Unbraaki",
+    "attack": 8,
+    "atkDC": 3,
+    "def": 6,
+    "health": 11,
+    "maxHealth": 11
+  },
+  {
+    "name": "Vicious Goblins",
+    "attack": 8,
+    "atkDC": 5,
+    "def": 4,
+    "health": 9,
+    "maxHealth": 9
+  },
+  {
+    "name": "Yu Yan",
+    "attack": 5,
+    "atkDC": 4,
+    "def": 4,
+    "health": 9,
+    "maxHealth": 9
+  },
+  {
+    "name": "Zealot Healer",
+    "attack": 3,
+    "atkDC": 4,
+    "def": 4,
+    "health": 15,
+    "maxHealth": 15
+  },
+  {
+    "name": "Zombie",
+    "attack": 7,
+    "atkDC": 4,
+    "def": 2,
+    "health": 20,
+    "maxHealth": 20
+  }
+]

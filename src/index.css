@@ -1,0 +1,57 @@
+/* ── Reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ── Google Fonts fallback in case index.html link is cached ── */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=IM+Fell+English:ital@0;1&family=Crimson+Pro:wght@300;400;600&display=swap');
+
+/* ── Theme tokens ── */
+:root {
+  --parchment:       #f5efd8;
+  --parchment-dark:  #e8dcc0;
+  --parchment-deep:  #d4c49a;
+  --ink:             #2c1f0e;
+  --ink-light:       #5a3e28;
+  --ink-faded:       #8b6a4a;
+  --crimson:         #8b1a1a;
+  --gold:            #b8860b;
+  --gold-light:      #d4a017;
+  --sepia:           #704214;
+  --border:          #c4a96a;
+  --spell-green:     #2a5a30;
+
+  --font-display: 'Cinzel', Georgia, serif;
+  --font-body:    'Crimson Pro', Georgia, serif;
+  --font-italic:  'IM Fell English', Georgia, serif;
+}
+
+/* ── Base ── */
+html, body, #root {
+  height: 100%;
+  font-family: var(--font-body);
+  font-size: 16px;
+  background: var(--parchment);
+  color: var(--ink);
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--parchment-dark); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+/* ── Shared form element resets ── */
+input, select, textarea, button {
+  font-family: inherit;
+  font-size: 1rem;
+  color: inherit;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button { opacity: 1; }
+
+/* ── Utility classes ── */
+.cinzel        { font-family: var(--font-display); }
+.italic-serif  { font-family: var(--font-italic); font-style: italic; }
+.gold          { color: var(--gold-light); }
+.crimson       { color: var(--crimson); }
+.sepia         { color: var(--sepia); }
+.faded         { color: var(--ink-faded); }

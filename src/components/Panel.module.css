@@ -1,0 +1,33 @@
+.panel {
+  background: rgba(245, 239, 216, 0.97);
+  border: 1px solid var(--border);
+  padding: 14px 18px;
+  position: relative;
+}
+
+.panel::before {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border: 1px solid rgba(196, 169, 106, 0.22);
+  pointer-events: none;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--sepia);
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--parchment-deep);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ornament {
+  color: var(--gold);
+  font-size: 1.1rem;
+}

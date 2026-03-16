@@ -1,0 +1,104 @@
+[
+  {
+    "name": "Animal Speech",
+    "type": "Adventure",
+    "description": "You are able to communicate using the secret language of animals. The text will tell you when you can cast this spell.",
+    "recharge": "50 silver"
+  },
+  {
+    "name": "Armour of Heaven",
+    "type": "Combat",
+    "description": "Gain a +3 bonus to one party member's Armour which lasts until the end of this battle.",
+    "recharge": "50 silver"
+  },
+  {
+    "name": "Ice Bolt",
+    "type": "Combat",
+    "description": "You conjure a great block of ice and hurl it at your foe with magical strength. Make an immediate attack with a Fighting score of 8 against any opponent.",
+    "recharge": "50 silver"
+  },
+  {
+    "name": "Poison Stream",
+    "type": "Combat",
+    "description": "A sickly green poison jets from your hands. Make two immediate attacks with a Fighting score of 5, against two different opponents.",
+    "recharge": "50 silver"
+  },
+  {
+    "name": "Unfailing Strike",
+    "type": "Combat",
+    "description": "A pillar of energy sizzles into a single foe. Choose an opponent to lose 3 Health.",
+    "recharge": "50 silver"
+  },
+  {
+    "name": "Wolf Spirit",
+    "type": "Adventure",
+    "description": "You summon the spirit of the wolf to help guide you from danger in the natural world. Cast this spell when you fail a Survival check. You gain an additional 3 automatic successes for this check only.",
+    "recharge": "75 silver"
+  },
+  {
+    "name": "Magic Cabinet",
+    "type": "Adventure",
+    "description": "You summon a magic cabinet made of purple wood. You can use this cabinet to access The Vault, storing and/or taking out as many items as you wish. When you have done this, the cabinet will vanish, until summoned again.",
+    "recharge": "100 silver"
+  },
+  {
+    "name": "Wisdom",
+    "type": "Adventure",
+    "description": "Your mind awakens with ancient knowledge. Cast this spell when you have failed a Lore check. You gain 3 automatic successes for this check only.",
+    "recharge": "75 silver"
+  },
+  {
+    "name": "Dazing Lights",
+    "type": "Combat",
+    "description": "Swirling lights dazzle your foes' eyes. When your opponents attack this round they must reduce the score of each of their dice by 1 point.",
+    "recharge": "50 silver"
+  },
+  {
+    "name": "Soothing Touch",
+    "type": "Adventure or Combat",
+    "description": "Your hands glow with divine energy. Choose one of your party members; they can restore 5 Health points.",
+    "recharge": "50 silver"
+  },
+  {
+    "name": "Shadow Door",
+    "type": "Adventure",
+    "description": "You can detect the secret doors installed by the penumbral lords when they ruled the land. The text will tell you when you can cast this spell.",
+    "recharge": "50 silver"
+  },
+  {
+    "name": "Teleport Circle",
+    "type": "Adventure",
+    "description": "You invoke your spell and concentrate hard on your destination. You can feel the portal links that connect to a known location. Teleports the caster to a previously visited location.",
+    "recharge": "50 silver"
+  },
+  {
+    "name": "Silver Tongue",
+    "type": "Adventure",
+    "description": "Your confidence grows as you summon this spell. Cast this spell when you fail a Charisma check. You gain an additional 3 automatic successes for this check only.",
+    "recharge": "75 silver"
+  },
+  {
+    "name": "Sandstorm",
+    "type": "Combat",
+    "description": "You whip up a blast of glassy sand to shred all your foes at once. Make an immediate attack with a Fighting score of 3 against each opponent.",
+    "recharge": "50 silver"
+  },
+  {
+    "name": "Clinging Dread",
+    "type": "Mass Combat",
+    "description": "Doubt and uncertainty fill the hearts of the enemy soldiers. Reduce the Morale score of an enemy unit by 1 point. Can only be cast during Mass Combat \u2014 has no effect on personal combat.",
+    "recharge": "50 silver"
+  },
+  {
+    "name": "Warp Wood",
+    "type": "Sea Combat",
+    "description": "You utter a spell to twist and split the hull of an enemy ship. Choose an enemy ship to lose 3 Health. Can only be cast during sea combat.",
+    "recharge": "50 silver"
+  },
+  {
+    "name": "Scroll of Rage",
+    "type": "Combat",
+    "description": "Use in combat to increase the Fighting score of each of your party members by 1 point until the end of the combat. Single use \u2014 consumed after one use.",
+    "recharge": "N/A (single use)"
+  }
+]

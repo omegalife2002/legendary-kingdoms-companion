@@ -1,0 +1,77 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.label {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--sepia);
+  white-space: nowrap;
+  min-width: 56px;
+}
+
+.bar {
+  display: flex;
+  align-items: stretch;
+  flex: 1;
+  height: 36px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.stepBtn {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  background: var(--ink);
+  color: var(--gold-light);
+  border: none;
+  padding: 0 10px;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.12s;
+}
+.stepBtn:hover { background: var(--sepia); }
+
+.track {
+  flex: 1;
+  position: relative;
+  background: var(--parchment-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+}
+
+.fill {
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  transition: width 0.3s ease, background 0.3s ease;
+  pointer-events: none;
+}
+
+.numInput {
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--ink);
+  background: transparent;
+  border: none;
+  outline: none;
+  text-align: center;
+  width: 100%;
+  padding: 0 4px;
+  cursor: text;
+}
+
+/* Hide spinners — we have our own buttons */
+.numInput::-webkit-inner-spin-button,
+.numInput::-webkit-outer-spin-button { display: none; }
+.numInput[type=number] { -moz-appearance: textfield; }

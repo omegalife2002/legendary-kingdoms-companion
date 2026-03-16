@@ -1,0 +1,812 @@
+[
+  {
+    "name": "Amulet of Defence",
+    "type": "Other",
+    "details": "+1 Armour"
+  },
+  {
+    "name": "Animus Pendant",
+    "type": "Other",
+    "details": "+1 Armour"
+  },
+  {
+    "name": "Animus Robe",
+    "type": "Armour",
+    "details": "+3 Armour; +3 Lore"
+  },
+  {
+    "name": "Apocalypse Blade",
+    "type": "Weapon",
+    "details": "+4 Fighting; +2 Hit"
+  },
+  {
+    "name": "Apprentice's Spellbook",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Bailey Compass",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Bishop's Robe",
+    "type": "Armour",
+    "details": "+2 Lore; +1 Maximum Health"
+  },
+  {
+    "name": "Black Grass",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Black Plate Armour",
+    "type": "Armour",
+    "details": "+3 Armour"
+  },
+  {
+    "name": "Black Prism",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Blade of the Scion",
+    "type": "Weapon",
+    "details": "+4 Fighting; +2 Charisma"
+  },
+  {
+    "name": "Bluesteel Axe",
+    "type": "Weapon (two-handed)",
+    "details": "+4 Fighting"
+  },
+  {
+    "name": "Bluestone",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Bone Armour",
+    "type": "Armour",
+    "details": "+2 Armour"
+  },
+  {
+    "name": "Bone Sword",
+    "type": "Weapon",
+    "details": "+5 Fighting"
+  },
+  {
+    "name": "Brass Key",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Bronze Armour",
+    "type": "Armour",
+    "details": "+4 Armour"
+  },
+  {
+    "name": "Bronze Greatsword",
+    "type": "Weapon (two-handed)",
+    "details": "+4 Fighting"
+  },
+  {
+    "name": "Bronze Scorpion",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Bryce Longsword",
+    "type": "Weapon",
+    "details": "+3 Fighting"
+  },
+  {
+    "name": "Chain Armour",
+    "type": "Armour",
+    "details": "+2 Armour"
+  },
+  {
+    "name": "Chain Cutters",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Channelled Volcano Mask",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Chika's Ring",
+    "type": "Other",
+    "details": "+1 Maximum Health; +1 Armour"
+  },
+  {
+    "name": "Cloak Clasp",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Cloak of Wonder",
+    "type": "Other",
+    "details": "+3 to all skills"
+  },
+  {
+    "name": "Coralscale Armour",
+    "type": "Armour",
+    "details": "+2 Armour"
+  },
+  {
+    "name": "Coronet of House Ross",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Crude Blade",
+    "type": "Weapon",
+    "details": "+0 Fighting"
+  },
+  {
+    "name": "Crushed Opals",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Crystal Cat",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Curious Book",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Curious Sigil",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Deep Sea Harpoon",
+    "type": "Weapon (two-handed)",
+    "details": "+4 Fighting"
+  },
+  {
+    "name": "Dissolved Litanies",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Dragonyak Horn",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Edward's Cloak",
+    "type": "Other",
+    "details": "+2 Survival; +1 Lore"
+  },
+  {
+    "name": "Ellyn's Letter",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Enchanted Sword",
+    "type": "Weapon",
+    "details": "+5 Fighting"
+  },
+  {
+    "name": "Engagement Ring",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Fairbrother Family Crest",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Fine Boots",
+    "type": "Other",
+    "details": "+2 Stealth"
+  },
+  {
+    "name": "Frost Ring",
+    "type": "Other",
+    "details": "Spell Damage +1"
+  },
+  {
+    "name": "Ghost Bloom",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Glittering Necklace",
+    "type": "Other",
+    "details": "+2 Charisma"
+  },
+  {
+    "name": "Godwin's Pendant",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Gold Dust",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Golden Candlestick",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Golden Sword",
+    "type": "Weapon",
+    "details": "+2 Fighting; +1 Charisma"
+  },
+  {
+    "name": "Grey Robes",
+    "type": "Armour",
+    "details": ""
+  },
+  {
+    "name": "Grey Talisman",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Handsome Brooch",
+    "type": "Other",
+    "details": "+1 Charisma"
+  },
+  {
+    "name": "Hide Armour",
+    "type": "Armour",
+    "details": "+1 Armour"
+  },
+  {
+    "name": "Hogmaiden Leaves",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Hygliph Flower",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Incense",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Iron Greataxe",
+    "type": "Weapon",
+    "details": "+2 Fighting; Two-Handed"
+  },
+  {
+    "name": "Iron Sceptre",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Iron Shortsword",
+    "type": "Weapon",
+    "details": "+1 Fighting"
+  },
+  {
+    "name": "Kensai Robes",
+    "type": "Armour",
+    "details": "+3 Armour"
+  },
+  {
+    "name": "Liar's Tongue",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Lizard Hide",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Lodestone",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Madshard",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Madstone",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Magic Boots",
+    "type": "Other",
+    "details": "+3 Stealth"
+  },
+  {
+    "name": "Magic Shield",
+    "type": "Shield",
+    "details": "+3 Armour"
+  },
+  {
+    "name": "Magical Shortsword",
+    "type": "Weapon",
+    "details": "+4 Fighting"
+  },
+  {
+    "name": "Mancer's Robes",
+    "type": "Armour",
+    "details": "+2 Armour; +2 Lore"
+  },
+  {
+    "name": "Map of the Undertunnels",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Masterwork Blade",
+    "type": "Weapon",
+    "details": "+3 Fighting"
+  },
+  {
+    "name": "Masterwork Greatsword",
+    "type": "Weapon (two-handed)",
+    "details": "+4 Fighting"
+  },
+  {
+    "name": "Maul",
+    "type": "Weapon",
+    "details": "+1 Fighting; Two-Handed"
+  },
+  {
+    "name": "Morkarin's Cloak",
+    "type": "Other",
+    "details": "+2 Charisma; +2 Armour"
+  },
+  {
+    "name": "Mortal Dust",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Noble Garments",
+    "type": "Armour",
+    "details": "+3 Charisma"
+  },
+  {
+    "name": "Pile of Rubies",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Potion of Insight",
+    "type": "Other",
+    "details": "Grants 2 Lore successes"
+  },
+  {
+    "name": "Potion of Silence",
+    "type": "Other",
+    "details": "Grants 2 Stealth successes"
+  },
+  {
+    "name": "Potion of Strength",
+    "type": "Other",
+    "details": "Grants 2 Fighting successes"
+  },
+  {
+    "name": "Prayer Crystals",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Precious Tomes",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Priest Robes",
+    "type": "Armour",
+    "details": "+0 Armour"
+  },
+  {
+    "name": "Prybar",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Puzzle Stone",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Rainbow Skin",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Ranger's Leather Armour",
+    "type": "Armour",
+    "details": "+2 Armour; +3 Survival"
+  },
+  {
+    "name": "Red Berries",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Reference Book",
+    "type": "Other",
+    "details": "+1 Lore"
+  },
+  {
+    "name": "Registry Papers",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Rigger's Blade",
+    "type": "Weapon",
+    "details": "+2 Fighting; +2 Survival"
+  },
+  {
+    "name": "Ring of Green Steel",
+    "type": "Other",
+    "details": "+1 Maximum Health; +1 Armour"
+  },
+  {
+    "name": "Ring of Health",
+    "type": "Other",
+    "details": "+2 Max Health"
+  },
+  {
+    "name": "Ring of the Sorcerer",
+    "type": "Other",
+    "details": "Spell recharge chance"
+  },
+  {
+    "name": "Ross Cider",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Ross Vault Key",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Rugged Cloak",
+    "type": "Other",
+    "details": "+2 Survival"
+  },
+  {
+    "name": "Runesword",
+    "type": "Weapon",
+    "details": "+3 Fighting"
+  },
+  {
+    "name": "Rusty Key",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Sabre",
+    "type": "Weapon",
+    "details": "+1 Fighting"
+  },
+  {
+    "name": "Salsach Crockery",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Scandalous Letter",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Scoundrel Dice",
+    "type": "Other",
+    "details": "+3 Charisma; +3 Survival"
+  },
+  {
+    "name": "Scroll of Armour of Heaven",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Scroll of Ice Bolt",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Scroll of Magic Cabinet",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Scroll of Poison Stream",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Scroll of Rage",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Scroll of Soothing Touch",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Scroll of Unfailing Strike",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Scroll of Wolf Spirit",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Scrolls of Cursus",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Scrolls of Lore",
+    "type": "Other",
+    "details": "+3 Lore"
+  },
+  {
+    "name": "Sea Token",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Seal of House Bailey",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Seal of House Dayne",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Seal of House Goldwell",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Seal of House Ross",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Sealed Box",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Shield",
+    "type": "Shield",
+    "details": "+2 Armour"
+  },
+  {
+    "name": "Shield of Dayne",
+    "type": "Shield",
+    "details": "+3 Armour"
+  },
+  {
+    "name": "Silver Candlestick",
+    "type": "Weapon (two-handed)",
+    "details": "+0 Fighting"
+  },
+  {
+    "name": "Silver Dagger",
+    "type": "Weapon",
+    "details": "+1 Fighting"
+  },
+  {
+    "name": "Silver Idol",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Silver Skull",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Silver-Elf Armour",
+    "type": "Armour",
+    "details": "+2 Armour; +2 Stealth"
+  },
+  {
+    "name": "Silvered Armour",
+    "type": "Armour",
+    "details": "+5 Armour"
+  },
+  {
+    "name": "Skallos Runeblade",
+    "type": "Weapon",
+    "details": "+3 Fighting; +2 Lore"
+  },
+  {
+    "name": "Small Chest",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Soft Boots",
+    "type": "Other",
+    "details": "+1 Stealth"
+  },
+  {
+    "name": "Sorcerer's Crown",
+    "type": "Other",
+    "details": "Grants Crown Bolt spell"
+  },
+  {
+    "name": "Sovereign Diamond",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Spear",
+    "type": "Weapon",
+    "details": "+0 Fighting"
+  },
+  {
+    "name": "Spice Flowers",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Steel Falchion",
+    "type": "Weapon (two-handed)",
+    "details": "+3 Fighting"
+  },
+  {
+    "name": "Steel Greatsword",
+    "type": "Weapon (two-handed)",
+    "details": "+3 Fighting"
+  },
+  {
+    "name": "Steel Longsword",
+    "type": "Weapon",
+    "details": "+2 Fighting"
+  },
+  {
+    "name": "Steel Scimitar",
+    "type": "Weapon",
+    "details": "+2 Fighting"
+  },
+  {
+    "name": "Stonecutter Sword",
+    "type": "Weapon",
+    "details": "+2 Fighting"
+  },
+  {
+    "name": "Stonework Key",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Swan Blade",
+    "type": "Weapon",
+    "details": "+3 Fighting; +2 Lore"
+  },
+  {
+    "name": "Sword of Ages",
+    "type": "Weapon",
+    "details": "+3 Fighting; +1 Hit"
+  },
+  {
+    "name": "Sword of Heaven",
+    "type": "Weapon",
+    "details": "+1 Hit"
+  },
+  {
+    "name": "Sword of Silence",
+    "type": "Weapon",
+    "details": "+3 Fighting; +3 Stealth"
+  },
+  {
+    "name": "Talisman of St Elias",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Thief's Armour",
+    "type": "Armour",
+    "details": "+2 Armour; +2 Stealth"
+  },
+  {
+    "name": "Thought Beads",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Tier Vesh Key",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Tome of Knowledge",
+    "type": "Other",
+    "details": "+2 Lore"
+  },
+  {
+    "name": "Trickster's Bodice",
+    "type": "Other",
+    "details": "+2 Charisma; +2 Stealth"
+  },
+  {
+    "name": "Vial of Poison",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Vial of Quicksilver",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Volcano Mask",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "War Spear",
+    "type": "Weapon",
+    "details": "+3 Fighting"
+  },
+  {
+    "name": "Warlock Talisman",
+    "type": "Other",
+    "details": "+4 Lore; +4 Survival"
+  },
+  {
+    "name": "Warm Cloak",
+    "type": "Other",
+    "details": "+1 Survival"
+  },
+  {
+    "name": "Wayfinder Rod",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Wheat Stalks",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "White Robes",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Wicked Talisman",
+    "type": "Other",
+    "details": ""
+  },
+  {
+    "name": "Wish Coral",
+    "type": "Other",
+    "details": "+1 Fighting; +1 Lore; +1 Stealth; +1 Survival; +1 Charisma"
+  },
+  {
+    "name": "Wrist Razor",
+    "type": "Other",
+    "details": "Special attack: deal 2 damage without rolling"
+  }
+]

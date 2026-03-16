@@ -1,0 +1,242 @@
+/* ── Tab bar ── */
+.tabBar {
+  display: flex;
+  gap: 0;
+  border-bottom: 2px solid var(--border);
+  margin-bottom: 14px;
+}
+.tab {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 9px 22px;
+  cursor: pointer;
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  color: var(--ink-faded);
+  background: transparent;
+  transition: all 0.15s;
+}
+.tab:hover:not(.tabOn) { color: var(--sepia); }
+.tabOn {
+  color: var(--ink);
+  font-weight: 600;
+  border-bottom-color: var(--sepia);
+  background: transparent;
+}
+
+/* ── Character sub-tabs (unchanged style) ── */
+.charTabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+.charTab {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 8px 18px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-bottom: none;
+  color: var(--ink-faded);
+  background: transparent;
+  transition: all 0.15s;
+  margin-bottom: -1px;
+}
+.charTab:hover:not(.charTabOn) { color: var(--sepia); }
+.charTabOn {
+  background: var(--parchment);
+  border-color: var(--border);
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* ── Section layout ── */
+.section { display: flex; flex-direction: column; gap: 12px; }
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--parchment-deep);
+}
+.sectionCount {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--ink-faded);
+}
+.addBtn {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  background: var(--ink);
+  color: var(--gold-light);
+  border: 1px solid var(--gold);
+  padding: 6px 14px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.addBtn:hover { background: var(--gold); color: var(--ink); }
+.emptyNote {
+  font-family: var(--font-italic);
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--ink-faded);
+  padding: 8px 0;
+}
+
+/* ── Card grid ── */
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 12px;
+}
+.card {
+  background: var(--parchment-dark);
+  border: 1px solid var(--border);
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border: 1px solid rgba(196,169,106,0.2);
+  pointer-events: none;
+}
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.cardName {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  flex: 1;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--border);
+  color: var(--ink);
+  outline: none;
+  padding: 2px 4px;
+  letter-spacing: 0.5px;
+}
+.cardName::placeholder {
+  font-weight: 400;
+  color: var(--parchment-deep);
+  font-family: var(--font-italic);
+  font-style: italic;
+}
+.removeBtn {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  background: transparent;
+  border: none;
+  color: var(--crimson);
+  cursor: pointer;
+  padding: 2px 5px;
+  opacity: 0.5;
+  flex-shrink: 0;
+}
+.removeBtn:hover { opacity: 1; }
+
+/* ── Card stats ── */
+.cardStats { display: flex; flex-direction: column; gap: 8px; }
+.statBlock { display: flex; flex-direction: column; gap: 4px; }
+.statLabel {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--sepia);
+}
+.garrisonRow {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.garrisonSelect {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  background: var(--parchment);
+  border: 1px solid var(--border);
+  color: var(--ink);
+  padding: 5px 8px;
+  outline: none;
+  width: 100%;
+  cursor: pointer;
+}
+.garrisonCustom {
+  font-family: var(--font-italic);
+  font-style: italic;
+  font-size: 1rem;
+  background: transparent;
+  border: none;
+  border-bottom: 1px dashed var(--border);
+  color: var(--ink);
+  outline: none;
+  width: 100%;
+  padding: 2px 4px;
+  margin-top: 2px;
+}
+.garrisonCustom::placeholder { color: var(--parchment-deep); }
+
+/* ── Ship health row ── */
+.hpRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.hpSep { color: var(--parchment-deep); font-size: 1.1rem; }
+.hpMax {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--ink-faded);
+  width: 40px;
+  text-align: center;
+  background: transparent;
+  border: none;
+  border-bottom: 1px dashed var(--border);
+  outline: none;
+  padding: 0 2px;
+  -moz-appearance: textfield;
+}
+.hpMax::-webkit-inner-spin-button, .hpMax::-webkit-outer-spin-button { display: none; }
+
+/* ── Notes ── */
+.notesLabel {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--sepia);
+  margin-bottom: 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--parchment-deep);
+}
+.notesArea {
+  font-family: var(--font-italic);
+  font-style: italic;
+  font-size: 1rem;
+  width: 100%;
+  background: var(--parchment-dark);
+  border: 1px dashed var(--border);
+  outline: none;
+  color: var(--ink);
+  resize: vertical;
+  line-height: 1.9;
+  padding: 10px 12px;
+}
+.notesArea::placeholder { color: var(--parchment-deep); }

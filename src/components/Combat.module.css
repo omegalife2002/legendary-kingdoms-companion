@@ -1,0 +1,143 @@
+.combatTabBar {
+  display: flex;
+  gap: 0;
+  border-bottom: 2px solid var(--border);
+  margin-bottom: 14px;
+}
+.combatTab {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 8px 20px;
+  cursor: pointer;
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  color: var(--ink-faded);
+  background: transparent;
+  transition: all 0.15s;
+}
+.combatTab:hover:not(.combatTabOn) { color: var(--sepia); }
+.combatTabOn {
+  color: var(--ink);
+  font-weight: 600;
+  border-bottom-color: var(--sepia);
+}
+.resetCombatBtn {
+  font-family: var(--font-display); font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase;
+  background: transparent; border: 1px solid var(--crimson); color: var(--crimson);
+  padding: 4px 10px; cursor: pointer; transition: all 0.15s;
+}
+.resetCombatBtn:hover { background: var(--crimson); color: var(--parchment); }
+.layout { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.leftCol { display: flex; flex-direction: column; gap: 6px; }
+.rightCol { display: flex; flex-direction: column; gap: 10px; }
+.sectionTitle {
+  font-family: var(--font-display); font-size: 0.9rem; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--sepia);
+  padding-bottom: 6px; border-bottom: 1px solid var(--parchment-deep);
+  margin-bottom: 8px; display: flex; align-items: center; justify-content: space-between;
+}
+.roundStatus { font-family: var(--font-italic); font-style: italic; font-size: 0.85rem; color: var(--ink-faded); letter-spacing: 0; text-transform: none; }
+
+/* Enemy roster */
+.enemyRow {
+  background: var(--parchment-dark); border: 1px solid var(--border);
+  padding: 7px 8px; display: flex; flex-direction: column; gap: 5px;
+}
+.defeated { opacity: 0.45; }
+.enemyName {
+  font-family: var(--font-italic); font-style: italic; font-size: 1rem;
+  background: transparent; border: none; border-bottom: 1px solid var(--border);
+  color: var(--ink); outline: none; width: 100%; padding: 1px;
+}
+.enemyStats { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.statCell { display: flex; flex-direction: column; align-items: center; gap: 2px; }
+.statLbl { font-family: var(--font-display); font-size: 0.72rem; letter-spacing: 1px; text-transform: uppercase; color: var(--ink-faded); }
+.statInp {
+  font-family: var(--font-body); font-size: 1rem; font-weight: 600;
+  width: 36px; text-align: center;
+  background: var(--parchment); border: 1px solid var(--border); color: var(--ink); outline: none; padding: 2px;
+}
+.hpCtrls { display: flex; align-items: center; gap: 2px; }
+.hpBtn {
+  height: 24px; min-width: 24px; background: var(--ink); color: var(--gold-light);
+  border: none; font-size: 1rem; cursor: pointer;
+  display: inline-flex; align-items: center; justify-content: center;
+}
+.hpBtn:hover { background: var(--sepia); }
+.delBtn { font-family: var(--font-display); font-size: 1rem; background: transparent; border: none; color: var(--crimson); cursor: pointer; padding: 3px 5px; opacity: 0.6; margin-left: auto; }
+.delBtn:hover { opacity: 1; }
+.addEnemyRow { display: flex; gap: 6px; }
+.addDbBtn {
+  font-family: var(--font-display); font-size: 0.9rem; letter-spacing: 1px;
+  background: var(--ink); color: var(--gold-light); border: 1px solid var(--gold);
+  padding: 7px 12px; cursor: pointer; transition: all 0.15s; flex-shrink: 0;
+}
+.addDbBtn:hover { background: var(--gold); color: var(--ink); }
+.addBtn {
+  font-family: var(--font-display); font-size: 0.9rem; letter-spacing: 1px;
+  background: transparent; border: 1px dashed var(--border); color: var(--ink-faded);
+  padding: 7px; width: 100%; cursor: pointer; transition: all 0.15s;
+}
+.addBtn:hover { border-color: var(--sepia); color: var(--sepia); }
+
+/* Turn block */
+.turnBlock { display: flex; flex-direction: column; gap: 10px; }
+.pickerLabel { font-family: var(--font-display); font-size: 0.85rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-faded); }
+.charBtns { display: flex; flex-wrap: wrap; gap: 5px; }
+.charBtn {
+  font-family: var(--font-display); font-size: 0.9rem; padding: 6px 12px;
+  border: 1px solid var(--border); cursor: pointer; background: transparent;
+  color: var(--ink-faded); transition: all 0.15s;
+}
+.charBtn:hover:not(:disabled):not(.charBtnOn) { border-color: var(--sepia); color: var(--sepia); }
+.charBtnOn { background: var(--ink); color: var(--gold-light); border-color: var(--ink); }
+.charBtnActed { opacity: 0.4; cursor: not-allowed; }
+.actedTag { color: #4a9a50; }
+.enemyBtn:not(.charBtnOn) { border-color: var(--crimson); color: var(--crimson); }
+
+.rollBtn {
+  font-family: var(--font-display); font-size: 0.95rem; font-weight: 600;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  background: var(--ink); color: var(--gold-light);
+  border: 1px solid var(--gold); padding: 10px; cursor: pointer; width: 100%; transition: all 0.15s;
+}
+.rollBtn:hover { filter: brightness(1.15); }
+
+.turnFooter { display: flex; gap: 8px; margin-top: 4px; }
+.enemyTurnBtn {
+  font-family: var(--font-display); font-size: 0.9rem; font-weight: 600;
+  letter-spacing: 1px; text-transform: uppercase;
+  background: var(--crimson); color: var(--parchment);
+  border: 1px solid #6b1212; padding: 8px 14px; cursor: pointer; flex: 1; transition: all 0.15s;
+}
+.enemyTurnBtn:hover { background: #a52020; }
+.newRoundBtn {
+  font-family: var(--font-display); font-size: 0.9rem; letter-spacing: 1px;
+  background: transparent; border: 1px solid var(--border); color: var(--ink-faded);
+  padding: 8px 14px; cursor: pointer; transition: all 0.15s;
+}
+.newRoundBtn:hover { border-color: var(--sepia); color: var(--sepia); }
+
+.hitResult { background: var(--ink); border: 1px solid var(--gold); padding: 8px 12px; }
+.hitLabel { font-family: var(--font-display); font-size: 1rem; color: var(--gold-light); margin-bottom: 6px; }
+
+/* Log */
+.log { margin-top: 14px; display: flex; flex-direction: column; gap: 5px; }
+.logTitle { font-family: var(--font-display); font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; color: var(--ink-faded); margin-bottom: 4px; }
+.logEntry { background: var(--ink); border: 1px solid; padding: 8px 12px; }
+.logParty { border-color: var(--gold); }
+.logEnemy { border-color: var(--crimson); }
+.logLabel { font-family: var(--font-display); font-size: 0.9rem; letter-spacing: 1px; color: var(--gold); margin-bottom: 3px; }
+.logDetail { font-family: var(--font-italic); font-style: italic; font-size: 0.95rem; color: #a08050; line-height: 1.4; margin-bottom: 5px; }
+.subLabel { font-family: var(--font-display); font-size: 0.75rem; letter-spacing: 1px; text-transform: uppercase; color: var(--ink-faded); margin: 4px 0 2px; }
+.diceRow { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; }
+.die {
+  font-family: var(--font-display); font-size: 0.9rem; width: 26px; height: 26px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border: 1px solid; font-weight: 600;
+}
+.hit { background: var(--gold-light); color: var(--ink); border-color: var(--gold-light); }
+.miss { background: transparent; color: #5a4a30; border-color: #3a2a10; }
