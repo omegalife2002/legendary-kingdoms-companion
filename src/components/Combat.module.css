@@ -235,3 +235,29 @@
   min-width: 36px;
   text-align: center;
 }
+
+/* Multi-target spell selection */
+.spellTargetBtn {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  padding: 6px 10px;
+  border: 1px solid rgba(74,48,128,0.3);
+  cursor: pointer;
+  background: transparent;
+  color: var(--ink-faded);
+  transition: all 0.12s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.spellTargetBtn:hover { border-color: #7a60c0; color: #7a60c0; }
+.spellTargetOn { background: rgba(74,48,128,0.15); border-color: #7a60c0; color: #7a60c0; }
+.spellAllTargets { display: flex; flex-wrap: wrap; gap: 5px; }
+.spellTargetTag {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  padding: 3px 8px;
+  background: rgba(74,48,128,0.12);
+  border: 1px solid rgba(74,48,128,0.3);
+  color: #7a60c0;
+}

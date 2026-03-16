@@ -33,12 +33,30 @@ const ENEMY_FIELDS = [
   { key: "def", label: "Defence", type: "number" },
   { key: "health", label: "Health", type: "number" },
 ]
+// ── Detect how many targets a spell needs from its description ───────────────
+function detectTargetCount(description) {
+  if (!description) return 1
+  const d = description.toLowerCase()
+  // "each opponent" or "all opponents" = all alive
+  if (d.includes('each opponent') || d.includes('all opponent')) return 'all'
+  // "two different opponents" / "two opponents"
+  const twoMatch = d.match(/two\s+(different\s+)?opponent/)
+  if (twoMatch) return 2
+  // "three opponents" etc.
+  const numWords = { three: 3, four: 4, five: 5 }
+  for (const [word, n] of Object.entries(numWords)) {
+    if (d.includes(`${word} opponent`)) return n
+  }
+  return 1
+}
+
 // ── SpellPanel — shown during party turn for spellcasters ────────────────────
-function SpellPanel({ attacker, target, onSpellAttack, onDrain, styles: s }) {
+function SpellPanel({ attacker, enemiesAlive, allEnemies, onSpellCast, onDrain, styles: s }) {
   const [expanded, setExpanded] = useState(false)
   const [spellFighting, setSpellFighting] = useState(5)
   const [spellDC, setSpellDC] = useState(4)
   const [selectedSpellIdx, setSelectedSpellIdx] = useState(null)
+  const [selectedTargets, setSelectedTargets] = useState([]) // array of enemy indices
 
   const namedSpells = (attacker.spells || [])
     .map((sp, i) => ({ ...sp, _idx: i }))
@@ -46,14 +64,46 @@ function SpellPanel({ attacker, target, onSpellAttack, onDrain, styles: s }) {
 
   if (namedSpells.length === 0) return null
 
-  const selectedSpell = selectedSpellIdx !== null ? namedSpells.find(s => s._idx === selectedSpellIdx) : null
+  const selectedSpell = selectedSpellIdx !== null ? namedSpells.find(sp => sp._idx === selectedSpellIdx) : null
+  const targetCount = selectedSpell ? detectTargetCount(selectedSpell.description) : 1
+  const needsAll = targetCount === 'all'
+  const numTargets = needsAll ? enemiesAlive.length : targetCount
+
+  function selectSpell(idx) {
+    setSelectedSpellIdx(idx)
+    setSelectedTargets([])
+  }
+
+  function toggleTarget(eIdx) {
+    if (needsAll) return // all selected automatically
+    setSelectedTargets(prev => {
+      if (prev.includes(eIdx)) return prev.filter(i => i !== eIdx)
+      if (prev.length >= numTargets) return [...prev.slice(1), eIdx] // replace oldest if full
+      return [...prev, eIdx]
+    })
+  }
+
+  const effectiveTargets = needsAll
+    ? enemiesAlive.map(e => allEnemies.indexOf(e))
+    : selectedTargets
+
+  const canCast = selectedSpell?.charged &&
+    (needsAll ? enemiesAlive.length > 0 : effectiveTargets.length === numTargets)
 
   function castSpell() {
-    if (!selectedSpell || !target) return
+    if (!canCast) return
     onDrain(selectedSpellIdx)
-    onSpellAttack(selectedSpell, spellFighting, spellDC)
+    onSpellCast(selectedSpell, spellFighting, spellDC, effectiveTargets)
     setSelectedSpellIdx(null)
+    setSelectedTargets([])
     setExpanded(false)
+  }
+
+  function targetHint() {
+    if (!selectedSpell) return ''
+    if (needsAll) return `Targets all ${enemiesAlive.length} living enemies`
+    if (numTargets === 1) return 'Select 1 target below'
+    return `Select ${numTargets} targets (${effectiveTargets.length}/${numTargets} chosen)`
   }
 
   return (
@@ -68,7 +118,7 @@ function SpellPanel({ attacker, target, onSpellAttack, onDrain, styles: s }) {
             {namedSpells.map(sp => (
               <button key={sp._idx}
                 className={`${s.spellBtn} ${selectedSpellIdx === sp._idx ? s.spellBtnOn : ''} ${!sp.charged ? s.spellBtnDrained : ''}`}
-                onClick={() => setSelectedSpellIdx(sp._idx)}>
+                onClick={() => selectSpell(sp._idx)}>
                 <span>{sp.name}</span>
                 <span className={s.spellBtnMeta}>{sp.charged ? '● Charged' : '○ Drained'}</span>
               </button>
@@ -80,6 +130,33 @@ function SpellPanel({ attacker, target, onSpellAttack, onDrain, styles: s }) {
               {selectedSpell.description && (
                 <div className={s.spellDesc}>{selectedSpell.description}</div>
               )}
+
+              {/* Target selector */}
+              <div className={s.spellPanelLabel}>{targetHint()}</div>
+              {!needsAll && (
+                <div className={s.spellBtns}>
+                  {enemiesAlive.map(e => {
+                    const eIdx = allEnemies.indexOf(e)
+                    const isSelected = effectiveTargets.includes(eIdx)
+                    return (
+                      <button key={eIdx}
+                        className={`${s.spellTargetBtn} ${isSelected ? s.spellTargetOn : ''}`}
+                        onClick={() => toggleTarget(eIdx)}>
+                        {e.name} (HP {e.health})
+                        {isSelected && <span className={s.spellBtnMeta}> ✓</span>}
+                      </button>
+                    )
+                  })}
+                </div>
+              )}
+              {needsAll && enemiesAlive.length > 0 && (
+                <div className={s.spellAllTargets}>
+                  {enemiesAlive.map(e => (
+                    <span key={e.name} className={s.spellTargetTag}>{e.name}</span>
+                  ))}
+                </div>
+              )}
+
               <div className={s.spellAttackConfig}>
                 <div className={s.spellConfigLabel}>Spell Fighting Score</div>
                 <div className={s.spellConfigRow}>
@@ -94,11 +171,19 @@ function SpellPanel({ attacker, target, onSpellAttack, onDrain, styles: s }) {
                   <button className={s.spellStepBtn} onClick={() => setSpellDC(v => Math.min(6, v + 1))}>+</button>
                 </div>
               </div>
+
               <button className={s.rollBtn}
-                disabled={!target || !selectedSpell.charged}
+                disabled={!canCast}
                 onClick={castSpell}
                 style={{ marginTop: 8, background: '#4a3080', borderColor: '#6a50a0' }}>
-                {!selectedSpell.charged ? 'Spell is Drained' : !target ? 'Select a target first' : `Cast ${selectedSpell.name} — ${spellFighting} dice vs ${spellDC}+`}
+                {!selectedSpell.charged
+                  ? 'Spell is Drained'
+                  : !canCast
+                    ? needsAll
+                      ? 'No living enemies'
+                      : `Select ${numTargets - effectiveTargets.length} more target${numTargets - effectiveTargets.length !== 1 ? 's' : ''}`
+                    : `Cast ${selectedSpell.name} — ${spellFighting} dice vs ${spellDC}+ · ${needsAll ? 'all enemies' : effectiveTargets.length > 1 ? `${effectiveTargets.length} targets` : allEnemies[effectiveTargets[0]]?.name}`
+                }
               </button>
             </>
           )}
@@ -410,24 +495,32 @@ export default function Combat({ chars, onUpdateChars, enemyDB, onAddEnemy, armi
                     return (
                       <SpellPanel
                         attacker={attacker}
-                        target={selectedTarget !== null ? enemies[selectedTarget] : null}
-                        onSpellAttack={(spell, fighting, dc) => {
-                          if (selectedTarget === null) return
-                          const enemy = enemies[selectedTarget]
-                          const dice = Array.from({ length: fighting }, () => Math.floor(Math.random() * 6) + 1)
-                          const hits = dice.filter(d => d >= dc).length
-                          const updatedEnemies = enemies.map((e, i) =>
-                            i === selectedTarget ? { ...e, health: Math.max(0, e.health - hits) } : e
-                          )
+                        enemiesAlive={enemiesAlive}
+                        allEnemies={enemies}
+                        onSpellCast={(spell, fighting, dc, targetIdxs) => {
+                          const attacker = chars[selectedAttacker]
+                          let updatedEnemies = [...enemies]
+                          const entries = targetIdxs.map(eIdx => {
+                            const enemy = updatedEnemies[eIdx]
+                            const dice = Array.from({ length: fighting }, () => Math.floor(Math.random() * 6) + 1)
+                            const hits = dice.filter(d => d >= dc).length
+                            updatedEnemies = updatedEnemies.map((e, i) =>
+                              i === eIdx ? { ...e, health: Math.max(0, e.health - hits) } : e
+                            )
+                            return { enemy, dice, hits, newHP: Math.max(0, enemy.health - hits), dc }
+                          })
                           setEnemies(updatedEnemies)
                           setActedChars(prev => new Set([...prev, selectedAttacker]))
                           setSelectedAttacker(null)
                           setSelectedTarget(null)
-                          addLogEntry({
-                            type: 'party',
-                            label: `${attacker.name || 'Adventurer'} casts ${spell.name} → ${enemy.name}`,
-                            detail: `Fighting ${fighting}, DC ${dc}+ · ${hits} hit${hits !== 1 ? 's' : ''} · ${enemy.name} HP: ${Math.max(0, enemy.health - hits)}${Math.max(0, enemy.health - hits) <= 0 ? ' — DEFEATED' : ''}`,
-                            dice, dc,
+                          // Log one entry per target
+                          entries.forEach(({ enemy, dice, hits, newHP, dc }) => {
+                            addLogEntry({
+                              type: 'party',
+                              label: `${attacker.name || 'Adventurer'} casts ${spell.name} → ${enemy.name}`,
+                              detail: `Fighting ${fighting}, DC ${dc}+ · ${hits} hit${hits !== 1 ? 's' : ''} · ${enemy.name} HP: ${newHP}${newHP <= 0 ? ' — DEFEATED' : ''}`,
+                              dice, dc,
+                            })
                           })
                         }}
                         onDrain={(spellIdx) => {
