@@ -141,3 +141,97 @@
 }
 .hit { background: var(--gold-light); color: var(--ink); border-color: var(--gold-light); }
 .miss { background: transparent; color: #5a4a30; border-color: #3a2a10; }
+
+/* ── Spell panel in combat ── */
+.spellPanel {
+  margin-top: 6px;
+  border: 1px solid rgba(74,48,128,0.4);
+  background: rgba(74,48,128,0.05);
+}
+.spellPanelToggle {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  color: #7a60c0;
+  background: transparent;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  transition: color 0.12s;
+}
+.spellPanelToggle:hover { color: #9a80e0; }
+.spellPanelBody {
+  padding: 10px 12px;
+  border-top: 1px solid rgba(74,48,128,0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.spellPanelLabel {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #7a60c0;
+}
+.spellBtns { display: flex; flex-direction: column; gap: 4px; }
+.spellBtn {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  padding: 6px 10px;
+  border: 1px solid rgba(74,48,128,0.3);
+  cursor: pointer;
+  background: transparent;
+  color: var(--ink-faded);
+  transition: all 0.12s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.spellBtn:hover:not(.spellBtnDrained) { border-color: #7a60c0; color: #7a60c0; }
+.spellBtnOn { background: #4a3080; color: #e0d0ff; border-color: #4a3080; }
+.spellBtnDrained { opacity: 0.4; cursor: not-allowed; }
+.spellBtnMeta { font-size: 0.72rem; opacity: 0.8; }
+.spellDesc {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  color: var(--ink-light);
+  background: var(--parchment-dark);
+  border: 1px solid rgba(74,48,128,0.2);
+  padding: 6px 8px;
+  line-height: 1.5;
+}
+.spellAttackConfig { display: flex; flex-direction: column; gap: 4px; }
+.spellConfigLabel {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--ink-faded);
+}
+.spellConfigRow { display: flex; align-items: center; gap: 8px; }
+.spellStepBtn {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  width: 28px; height: 28px;
+  background: var(--ink);
+  color: var(--gold-light);
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.12s;
+}
+.spellStepBtn:hover { background: #4a3080; }
+.spellStepVal {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--ink);
+  min-width: 36px;
+  text-align: center;
+}

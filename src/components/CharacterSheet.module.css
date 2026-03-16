@@ -59,6 +59,24 @@
 .removeEqBtn:hover { opacity: 1; }
 
 /* Shared DB + expand buttons */
+.eqSlotEquipped { background: rgba(42,102,48,0.08); border-color: rgba(42,102,48,0.5); }
+.equippedBtn {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  letter-spacing: 0.5px;
+  padding: 2px 7px;
+  border: 1px solid currentColor;
+  cursor: pointer;
+  background: transparent;
+  transition: all 0.12s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.equippedOn  { color: #2a6630; border-color: #2a6630; background: rgba(42,102,48,0.12); }
+.equippedOn:hover { background: #2a6630; color: var(--parchment); }
+.equippedOff { color: var(--ink-faded); border-color: var(--parchment-deep); }
+.equippedOff:hover { border-color: var(--sepia); color: var(--sepia); }
+
 .dbBtn { font-family: var(--font-display); font-size: 1rem; background: transparent; border: none; color: var(--gold); cursor: pointer; padding: 1px 3px; opacity: 0.7; flex-shrink: 0; transition: opacity 0.12s; }
 .dbBtn:hover { opacity: 1; }
 .expandBtn { font-family: var(--font-display); font-size: 0.75rem; background: transparent; border: none; color: var(--ink-faded); cursor: pointer; padding: 1px 3px; flex-shrink: 0; }

@@ -40,12 +40,28 @@ export default function CharacterSheet({ char, onChange, equipmentDB, spellDB, o
     const eq = char.eq.map((e, i) => i === index ? { ...e, [field]: value } : e)
     onChange({ ...char, eq })
   }
+  function toggleEquipped(index) {
+    const slot = char.eq[index]
+    if (!slot?.item) return
+    const nowEquipped = !slot.equipped
+    const parsed = parseEquipmentDetails(slot.bonus || '')
+    const eq = char.eq.map((e, i) => i === index ? { ...e, equipped: nowEquipped } : e)
+    // Apply or reverse armour/health when toggling equipped state
+    onChange({
+      ...char, eq,
+      armour: parsed.armour
+        ? Math.max(0, (parseInt(char.armour) || 0) + (nowEquipped ? parsed.armour : -parsed.armour))
+        : char.armour,
+      maxHealth: parsed.maxHealth
+        ? Math.max(1, (char.maxHealth || 8) + (nowEquipped ? parsed.maxHealth : -parsed.maxHealth))
+        : char.maxHealth,
+    })
+  }
   function clearEq(index) {
     const slot = char.eq[index]
-    const eq = char.eq.map((e, i) => i === index ? { item: '', bonus: '' } : e)
-    // Never modify char.skills — skill bonuses are computed live from eq slots.
-    // Only reverse armour and maxHealth since those aren't auto-derived.
-    if (slot?.bonus) {
+    const eq = char.eq.map((e, i) => i === index ? { item: '', bonus: '', equipped: false } : e)
+    // Only reverse armour/health if the item was equipped
+    if (slot?.bonus && slot?.equipped) {
       const parsed = parseEquipmentDetails(slot.bonus)
       onChange({
         ...char, eq,
@@ -66,16 +82,10 @@ export default function CharacterSheet({ char, onChange, equipmentDB, spellDB, o
   }
 
   function equipItem(slotIdx, item) {
-    // Only write to the eq slot — NEVER touch char.skills.
-    // Skill bonuses are computed live from eq by getItemBonus() in defaults.js.
-    const eq = char.eq.map((e, i) => i === slotIdx ? { item: item.name, bonus: item.details || '' } : e)
-    const parsed = parseEquipmentDetails(item.details)
-    const wasEmpty = !char.eq[slotIdx]?.item
-    onChange({
-      ...char, eq,
-      armour: wasEmpty && parsed.armour ? (parseInt(char.armour) || 0) + parsed.armour : char.armour,
-      maxHealth: wasEmpty && parsed.maxHealth ? (char.maxHealth || 8) + parsed.maxHealth : char.maxHealth,
-    })
+    // Write to eq slot but do NOT auto-equip — player decides via toggle.
+    // Skill bonuses are computed live from equipped slots only.
+    const eq = char.eq.map((e, i) => i === slotIdx ? { item: item.name, bonus: item.details || '', equipped: false } : e)
+    onChange({ ...char, eq })
   }
 
   function learnSpell(slotIdx, item) {
@@ -176,14 +186,23 @@ export default function CharacterSheet({ char, onChange, equipmentDB, spellDB, o
           <div className={styles.colTitle}>Equipment (max 10)</div>
           <div className={styles.eqList}>
             {Array.from({ length: EQ_SLOTS }, (_, i) => {
-              const slot = char.eq[i] || { item: '', bonus: '' }
+              const slot = char.eq[i] || { item: '', bonus: '', equipped: false }
               const hasItem = slot.item.trim() !== ''
+              const isEquipped = hasItem && !!slot.equipped
               return (
-                <div key={i} className={`${styles.eqSlot} ${hasItem ? styles.eqSlotFilled : ''}`}>
+                <div key={i} className={`${styles.eqSlot} ${hasItem ? styles.eqSlotFilled : ''} ${isEquipped ? styles.eqSlotEquipped : ''}`}>
                   <div className={styles.eqSlotTop}>
                     <span className={styles.eqNum}>{i + 1}</span>
                     <input className={styles.eqItem} value={slot.item} placeholder="— empty —"
                       onChange={e => updateEq(i, 'item', e.target.value)} />
+                    {hasItem && (
+                      <button
+                        className={`${styles.equippedBtn} ${isEquipped ? styles.equippedOn : styles.equippedOff}`}
+                        onClick={() => toggleEquipped(i)}
+                        title={isEquipped ? 'Click to unequip' : 'Click to equip'}>
+                        {isEquipped ? 'Equipped' : 'Carrying'}
+                      </button>
+                    )}
                     <button className={styles.dbBtn} onClick={() => setEqModal(i)} title="Pick from database">⊕</button>
                     {hasItem && (
                       <button className={styles.removeEqBtn} onClick={() => clearEq(i)} title="Remove item">✕</button>

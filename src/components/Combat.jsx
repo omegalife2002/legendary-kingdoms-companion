@@ -33,6 +33,81 @@ const ENEMY_FIELDS = [
   { key: "def", label: "Defence", type: "number" },
   { key: "health", label: "Health", type: "number" },
 ]
+// ── SpellPanel — shown during party turn for spellcasters ────────────────────
+function SpellPanel({ attacker, target, onSpellAttack, onDrain, styles: s }) {
+  const [expanded, setExpanded] = useState(false)
+  const [spellFighting, setSpellFighting] = useState(5)
+  const [spellDC, setSpellDC] = useState(4)
+  const [selectedSpellIdx, setSelectedSpellIdx] = useState(null)
+
+  const namedSpells = (attacker.spells || [])
+    .map((sp, i) => ({ ...sp, _idx: i }))
+    .filter(sp => sp.name)
+
+  if (namedSpells.length === 0) return null
+
+  const selectedSpell = selectedSpellIdx !== null ? namedSpells.find(s => s._idx === selectedSpellIdx) : null
+
+  function castSpell() {
+    if (!selectedSpell || !target) return
+    onDrain(selectedSpellIdx)
+    onSpellAttack(selectedSpell, spellFighting, spellDC)
+    setSelectedSpellIdx(null)
+    setExpanded(false)
+  }
+
+  return (
+    <div className={s.spellPanel}>
+      <button className={s.spellPanelToggle} onClick={() => setExpanded(p => !p)}>
+        ✦ {attacker.name} has spells — {expanded ? 'hide' : 'cast instead of attacking'}
+      </button>
+      {expanded && (
+        <div className={s.spellPanelBody}>
+          <div className={s.spellPanelLabel}>Select Spell</div>
+          <div className={s.spellBtns}>
+            {namedSpells.map(sp => (
+              <button key={sp._idx}
+                className={`${s.spellBtn} ${selectedSpellIdx === sp._idx ? s.spellBtnOn : ''} ${!sp.charged ? s.spellBtnDrained : ''}`}
+                onClick={() => setSelectedSpellIdx(sp._idx)}>
+                <span>{sp.name}</span>
+                <span className={s.spellBtnMeta}>{sp.charged ? '● Charged' : '○ Drained'}</span>
+              </button>
+            ))}
+          </div>
+
+          {selectedSpell && (
+            <>
+              {selectedSpell.description && (
+                <div className={s.spellDesc}>{selectedSpell.description}</div>
+              )}
+              <div className={s.spellAttackConfig}>
+                <div className={s.spellConfigLabel}>Spell Fighting Score</div>
+                <div className={s.spellConfigRow}>
+                  <button className={s.spellStepBtn} onClick={() => setSpellFighting(v => Math.max(1, v - 1))}>−</button>
+                  <span className={s.spellStepVal}>{spellFighting}</span>
+                  <button className={s.spellStepBtn} onClick={() => setSpellFighting(v => v + 1)}>+</button>
+                </div>
+                <div className={s.spellConfigLabel} style={{ marginTop: 6 }}>Defence (DC)</div>
+                <div className={s.spellConfigRow}>
+                  <button className={s.spellStepBtn} onClick={() => setSpellDC(v => Math.max(1, v - 1))}>−</button>
+                  <span className={s.spellStepVal}>{spellDC}+</span>
+                  <button className={s.spellStepBtn} onClick={() => setSpellDC(v => Math.min(6, v + 1))}>+</button>
+                </div>
+              </div>
+              <button className={s.rollBtn}
+                disabled={!target || !selectedSpell.charged}
+                onClick={castSpell}
+                style={{ marginTop: 8, background: '#4a3080', borderColor: '#6a50a0' }}>
+                {!selectedSpell.charged ? 'Spell is Drained' : !target ? 'Select a target first' : `Cast ${selectedSpell.name} — ${spellFighting} dice vs ${spellDC}+`}
+              </button>
+            </>
+          )}
+        </div>
+      )}
+    </div>
+  )
+}
+
 export default function Combat({ chars, onUpdateChars, enemyDB, onAddEnemy, armies }) {
   const [combatTab, setCombatTab] = useState('personal')
   const [enemies, setEnemies] = useState(() => [makeEnemy()])
@@ -321,6 +396,51 @@ export default function Combat({ chars, onUpdateChars, enemyDB, onAddEnemy, armi
                       )
                     })}
                   </div>
+
+                  {/* Spell panel — shown when the attacker is a spellcaster with combat spells */}
+                  {(() => {
+                    const attacker = chars[selectedAttacker]
+                    if (!attacker?.isSpellcaster) return null
+                    const combatSpells = (attacker.spells || []).filter(s =>
+                      s.name && s.charged && s.type &&
+                      (s.type.toLowerCase().includes('combat') || s.type.toLowerCase().includes('adventure'))
+                    )
+                    const allNamedSpells = (attacker.spells || []).filter(s => s.name)
+                    if (allNamedSpells.length === 0) return null
+                    return (
+                      <SpellPanel
+                        attacker={attacker}
+                        target={selectedTarget !== null ? enemies[selectedTarget] : null}
+                        onSpellAttack={(spell, fighting, dc) => {
+                          if (selectedTarget === null) return
+                          const enemy = enemies[selectedTarget]
+                          const dice = Array.from({ length: fighting }, () => Math.floor(Math.random() * 6) + 1)
+                          const hits = dice.filter(d => d >= dc).length
+                          const updatedEnemies = enemies.map((e, i) =>
+                            i === selectedTarget ? { ...e, health: Math.max(0, e.health - hits) } : e
+                          )
+                          setEnemies(updatedEnemies)
+                          setActedChars(prev => new Set([...prev, selectedAttacker]))
+                          setSelectedAttacker(null)
+                          setSelectedTarget(null)
+                          addLogEntry({
+                            type: 'party',
+                            label: `${attacker.name || 'Adventurer'} casts ${spell.name} → ${enemy.name}`,
+                            detail: `Fighting ${fighting}, DC ${dc}+ · ${hits} hit${hits !== 1 ? 's' : ''} · ${enemy.name} HP: ${Math.max(0, enemy.health - hits)}${Math.max(0, enemy.health - hits) <= 0 ? ' — DEFEATED' : ''}`,
+                            dice, dc,
+                          })
+                        }}
+                        onDrain={(spellIdx) => {
+                          onUpdateChars(prev => prev.map((c, i) => {
+                            if (i !== selectedAttacker) return c
+                            const spells = c.spells.map((s, si) => si === spellIdx ? { ...s, charged: false } : s)
+                            return { ...c, spells }
+                          }))
+                        }}
+                        styles={styles}
+                      />
+                    )
+                  })()}
                 </>
               )}
 

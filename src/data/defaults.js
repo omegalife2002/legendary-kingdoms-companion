@@ -25,7 +25,7 @@ import { parseEquipmentDetails } from './dbParser'
 export function getItemBonus(char, skill) {
   let total = 0
   for (const slot of (char.eq || [])) {
-    if (!slot?.bonus) continue
+    if (!slot?.bonus || !slot?.equipped) continue   // only count equipped items
     const parsed = parseEquipmentDetails(slot.bonus)
     total += parsed.skills[skill] || 0
   }
