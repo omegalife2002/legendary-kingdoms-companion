@@ -240,3 +240,247 @@
   padding: 10px 12px;
 }
 .notesArea::placeholder { color: var(--parchment-deep); }
+
+/* ── Fleet sub-tabs ── */
+.fleetSubTabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 14px;
+}
+.fleetSubTab {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 7px 18px;
+  cursor: pointer;
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  color: var(--ink-faded);
+  background: transparent;
+  transition: all 0.15s;
+}
+.fleetSubTab:hover:not(.fleetSubTabOn) { color: var(--sepia); }
+.fleetSubTabOn { color: var(--ink); font-weight: 600; border-bottom-color: var(--sepia); }
+
+/* ── Sea combat layout ── */
+.seaCombat { display: flex; flex-direction: column; gap: 12px; }
+.seaLayout { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.seaLeft { display: flex; flex-direction: column; gap: 12px; }
+.seaRight { display: flex; flex-direction: column; gap: 10px; }
+
+.seaBlock {
+  background: var(--parchment-dark);
+  border: 1px solid var(--border);
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.seaBlockTitle {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--sepia);
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--parchment-deep);
+}
+
+/* Your ship selector */
+.shipBtns { display: flex; flex-direction: column; gap: 5px; }
+.shipBtn {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  padding: 7px 12px;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  background: transparent;
+  color: var(--ink-faded);
+  transition: all 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+}
+.shipBtn:hover:not(.shipBtnOn) { border-color: var(--sepia); color: var(--sepia); }
+.shipBtnOn { background: var(--ink); color: var(--gold-light); border-color: var(--ink); }
+.shipBtnMeta { font-size: 0.78rem; opacity: 0.8; }
+
+/* Enemy ship fields */
+.enemyShipFields { display: flex; flex-direction: column; gap: 8px; }
+.enemyFieldRow { display: flex; flex-direction: column; gap: 3px; }
+.enemyFieldLabel {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--ink-faded);
+}
+.enemyFieldInput {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--border);
+  color: var(--ink);
+  outline: none;
+  padding: 2px 4px;
+  width: 100%;
+}
+.enemyHpRow { display: flex; align-items: center; gap: 6px; }
+
+/* Sea spell note */
+.seaSpellNote {
+  background: var(--parchment-dark);
+  border: 1px solid rgba(74,48,128,0.3);
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.seaSpellTitle {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #4a3080;
+}
+.seaSpellCaster { display: flex; flex-wrap: wrap; align-items: center; gap: 5px; }
+.seaSpellCasterName {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  color: var(--ink);
+  margin-right: 4px;
+}
+.seaSpellTag {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border: 1px solid currentColor;
+}
+.seaSpellCharged { color: #2a6630; border-color: #2a6630; background: rgba(42,102,48,0.1); }
+.seaSpellDrained { color: #8b5e3c; border-color: #8b5e3c; background: rgba(139,94,60,0.1); }
+
+/* Rule note */
+.seaRuleNote {
+  font-family: var(--font-italic);
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--ink-faded);
+  background: var(--parchment-dark);
+  border: 1px dashed var(--border);
+  padding: 7px 10px;
+  line-height: 1.5;
+}
+
+/* Attack buttons */
+.attackBtns { display: flex; flex-direction: column; gap: 6px; }
+.yourAttackBtn {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  background: var(--ink);
+  color: var(--gold-light);
+  border: 1px solid var(--gold);
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.yourAttackBtn:hover:not(:disabled) { background: var(--gold); color: var(--ink); }
+.yourAttackBtn:disabled { opacity: 0.4; cursor: not-allowed; }
+.enemyAttackBtn {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  background: var(--crimson);
+  color: var(--parchment);
+  border: 1px solid #6b1212;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.enemyAttackBtn:hover:not(:disabled) { background: #a52020; }
+.enemyAttackBtn:disabled { opacity: 0.4; cursor: not-allowed; }
+.resetBtn {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: transparent;
+  border: 1px solid var(--crimson);
+  color: var(--crimson);
+  padding: 7px 14px;
+  cursor: pointer;
+  transition: all 0.15s;
+  width: 100%;
+}
+.resetBtn:hover { background: var(--crimson); color: var(--parchment); }
+.resetSmallBtn {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--ink-faded);
+  padding: 6px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.resetSmallBtn:hover { border-color: var(--sepia); color: var(--sepia); }
+
+.combatResult {
+  background: var(--ink);
+  border: 1px solid var(--gold);
+  color: var(--gold-light);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: 1px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: center;
+}
+
+/* Round badge */
+.roundBadge {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--ink-faded);
+  text-align: center;
+  padding: 4px 0;
+  border-top: 1px solid var(--parchment-deep);
+}
+
+/* Combat log */
+.combatLog { display: flex; flex-direction: column; gap: 5px; max-height: 340px; overflow-y: auto; }
+.logEntry { background: var(--ink); border: 1px solid; padding: 7px 10px; display: flex; flex-direction: column; gap: 4px; }
+.logYours { border-color: var(--gold); }
+.logEnemy { border-color: var(--crimson); }
+.logLabel { font-family: var(--font-display); font-size: 0.85rem; letter-spacing: 1px; color: var(--gold-light); }
+.logDetail { font-family: var(--font-body); font-size: 0.9rem; color: #a08050; line-height: 1.4; font-style: italic; }
+
+/* Dice */
+.diceRow { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 3px; }
+.die {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  width: 24px; height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid;
+  font-weight: 600;
+}
+.hit { background: var(--gold-light); color: var(--ink); border-color: var(--gold-light); }
+.miss { background: transparent; color: #5a4a30; border-color: #3a2a10; }
