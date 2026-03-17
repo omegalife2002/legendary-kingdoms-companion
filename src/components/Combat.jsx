@@ -634,7 +634,7 @@ export default function Combat({ chars, onUpdateChars, enemyDB, onAddEnemy, armi
 
       {/* Mass Combat */}
       {combatTab === 'mass' && (
-        <MassCombat armies={armies || []} />
+        <MassCombat armies={armies || []} chars={chars} />
       )}
 
     </Panel>
