@@ -59,7 +59,7 @@ src/
 
 - **Persistent** — all campaign data (party, vault, codes) is saved to `localStorage` automatically. Refreshing the page or closing the browser preserves everything.
 - **New Campaign** button in the header resets all data with a confirmation prompt.
-- **Party** — 4-character party with name, status, health/max HP, armour, silver, skills (base/mod/final), equipment slots with bonuses, spellbook with charged/drained tracking, and notes
+- **Party** — 4-character party with name, class, status, health/max HP, armour, silver, skills (base/mod/final), equipment slots with bonuses, spellbook with charged/drained tracking, and notes
 - **Skill Checks** — Individual or team checks, configurable DC and successes needed, visual dice result with hit/miss highlighting
 - **Combat** — Add/remove enemies with Attack Dice, Attack DC, Defence, and HP; Party Attacks and Enemy Attacks resolve automatically with armour saves
 - **Vault & Codes** — Shared party storage, vault silver, and all 100 A-codes to click and track

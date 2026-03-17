@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react'
-import { DEFAULT_CHARS } from './data/defaults'
+import { makeChar } from './data/defaults'
 import { usePersist } from './hooks/usePersist'
 import CharacterSheet from './components/CharacterSheet'
 import SkillCheck from './components/SkillCheck'
@@ -17,18 +17,16 @@ import BASE_SPELLS    from './data/db_spells.json'
 const PAGES = ['party', 'checks', 'combat', 'vault']
 const PAGE_LABELS = { party: 'Party', checks: 'Skill Checks', combat: 'Combat', vault: 'Vault & Codes' }
 
-const INITIAL_CHARS = DEFAULT_CHARS.map(c => ({
-  ...c,
-  eq: c.eq.map(e => ({ ...e })),
-  spells: c.spells.map(s => ({ ...s })),
-}))
+function blankParty() {
+  return Array.from({ length: 4 }, () => makeChar())
+}
 
 export default function App() {
   const [page, setPage] = useState('party')
   const [activeChar, setActiveChar] = useState(0)
 
   // Campaign state — persisted
-  const [chars, setChars]             = usePersist('lkc-chars', INITIAL_CHARS)
+  const [chars, setChars]             = usePersist('lkc-chars', blankParty())
   const [silver, setSilver]           = usePersist('lkc-silver', 0)
   const [location, setLocation]       = usePersist('lkc-location', '')
   const [vaultItems, setVaultItems]   = usePersist('lkc-vault-items', ['', '', '', ''])
@@ -122,7 +120,7 @@ export default function App() {
 
   function resetAll() {
     if (!window.confirm('Reset all campaign data and start fresh? This cannot be undone.')) return
-    setChars(INITIAL_CHARS.map(c => ({ ...c, eq: c.eq.map(e => ({ ...e })), spells: c.spells.map(s => ({ ...s })) })))
+    setChars(blankParty())
     setSilver(0)
     setLocation('')
     setVaultItems(['', '', '', ''])
