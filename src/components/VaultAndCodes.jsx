@@ -30,6 +30,12 @@ function makeSpell() {
   return { name: '', description: '', charged: true, recharge: '' }
 }
 
+const BOOKS = [
+  { key: 'A', label: 'Valley of Bones', count: 100 },
+  { key: 'B', label: 'Crown and Tower', count: 110 },
+  { key: 'C', label: 'Pirates of the Splintered Isles', count: 100 },
+]
+
 export default function VaultAndCodes({
   items, onItemsChange,
   codes, onCodesChange,
@@ -40,10 +46,29 @@ export default function VaultAndCodes({
   const [eqModal, setEqModal] = useState(false)
   const [spellModal, setSpellModal] = useState(false)
   const [expandedSpell, setExpandedSpell] = useState(null)
+  const [activeBook, setActiveBook] = useState('A')
+  const [codesB, setCodesB] = useState(() => {
+    try { const s = localStorage.getItem('codesB'); return s ? JSON.parse(s) : Array(110).fill(false) } catch { return Array(110).fill(false) }
+  })
+  const [codesC, setCodesC] = useState(() => {
+    try { const s = localStorage.getItem('codesC'); return s ? JSON.parse(s) : Array(100).fill(false) } catch { return Array(100).fill(false) }
+  })
+
+  function saveCodesB(val) {
+    setCodesB(val)
+    try { localStorage.setItem('codesB', JSON.stringify(val)) } catch {}
+  }
+  function saveCodesC(val) {
+    setCodesC(val)
+    try { localStorage.setItem('codesC', JSON.stringify(val)) } catch {}
+  }
 
   function toggleCode(i) {
-    onCodesChange(prev => prev.map((c, idx) => idx === i ? !c : c))
+    if (activeBook === 'A') onCodesChange(prev => prev.map((c, idx) => idx === i ? !c : c))
+    if (activeBook === 'B') saveCodesB(codesB.map((c, idx) => idx === i ? !c : c))
+    if (activeBook === 'C') saveCodesC(codesC.map((c, idx) => idx === i ? !c : c))
   }
+
   function updateItem(i, val) {
     onItemsChange(prev => prev.map((it, idx) => idx === i ? val : it))
   }
@@ -68,6 +93,8 @@ export default function VaultAndCodes({
   function addEquipmentToVault(item) {
     onItemsChange(prev => [...prev, `${item.name}${item.details ? ' (' + item.details + ')' : ''}`])
   }
+
+  const activeCodes = activeBook === 'A' ? codes : activeBook === 'B' ? codesB : codesC
 
   return (
     <div className={styles.wrapper}>
@@ -142,11 +169,22 @@ export default function VaultAndCodes({
       </div>
 
       <Panel title="Adventure Codes" ornament="A">
+        <div className={styles.codeTabs}>
+          {BOOKS.map(book => (
+            <button
+              key={book.key}
+              className={`${styles.codeTab} ${activeBook === book.key ? styles.codeTabOn : ''}`}
+              onClick={() => setActiveBook(book.key)}
+            >
+              {book.label}
+            </button>
+          ))}
+        </div>
         <div className={styles.codesGrid}>
-          {codes.map((on, i) => (
+          {activeCodes.map((on, i) => (
             <button key={i} className={`${styles.codePip} ${on ? styles.circled : ''}`}
               onClick={() => toggleCode(i)}>
-              A{i + 1}
+              {activeBook}{i + 1}
             </button>
           ))}
         </div>
