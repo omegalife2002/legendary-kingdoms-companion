@@ -1,10 +1,10 @@
 /* ── Reset ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* ── Google Fonts fallback in case index.html link is cached ── */
+/* ── Google Fonts ── */
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=IM+Fell+English:ital@0;1&family=Crimson+Pro:wght@300;400;600&display=swap');
 
-/* ── Theme tokens ── */
+/* ── Theme: Valley of Bones (default — warm parchment/desert) ── */
 :root {
   --parchment:       #f5efd8;
   --parchment-dark:  #e8dcc0;
@@ -22,6 +22,59 @@
   --font-display: 'Cinzel', Georgia, serif;
   --font-body:    'Crimson Pro', Georgia, serif;
   --font-italic:  'IM Fell English', Georgia, serif;
+
+  --header-btn-bg:     #3a2a10;
+  --header-btn-border: #5a4a30;
+  --header-sub-color:  #8b6a4a;
+  --nav-btn-color:     #a08050;
+  --nav-btn-border:    #5a4a30;
+  --bg-line-color:     rgba(180,150,80,0.06);
+}
+
+/* ── Theme: Crown and Tower (regal stone — deep blue/silver/grey) ── */
+[data-theme="crown"] {
+  --parchment:       #e8ecf0;
+  --parchment-dark:  #d4dae2;
+  --parchment-deep:  #b8c2cc;
+  --ink:             #0f1820;
+  --ink-light:       #2a3a4a;
+  --ink-faded:       #5a6a7a;
+  --crimson:         #6a1a2a;
+  --gold:            #8a9ab0;
+  --gold-light:      #c0d0e0;
+  --sepia:           #2a4a6a;
+  --border:          #7a9ab8;
+  --spell-green:     #1a4a3a;
+
+  --header-btn-bg:     #1a2a3a;
+  --header-btn-border: #3a5a7a;
+  --header-sub-color:  #5a7a9a;
+  --nav-btn-color:     #8aaac8;
+  --nav-btn-border:    #3a5a7a;
+  --bg-line-color:     rgba(80,120,180,0.05);
+}
+
+/* ── Theme: Pirates of the Splintered Isles (nautical — teal/coral/sand) ── */
+[data-theme="pirates"] {
+  --parchment:       #f0efe6;
+  --parchment-dark:  #e0dece;
+  --parchment-deep:  #c8c4a8;
+  --ink:             #1a2018;
+  --ink-light:       #3a4830;
+  --ink-faded:       #6a7858;
+  --crimson:         #a03020;
+  --gold:            #c08820;
+  --gold-light:      #e0a830;
+  --sepia:           #3a6858;
+  --border:          #70a890;
+  --spell-green:     #1a5a40;
+
+  --header-btn-bg:     #1a3028;
+  --header-btn-border: #3a6050;
+  --header-sub-color:  #5a8870;
+  --nav-btn-color:     #80b8a0;
+  --nav-btn-border:    #3a6050;
+  --bg-line-color:     rgba(60,140,110,0.06);
 }
 
 /* ── Base ── */

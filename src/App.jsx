@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { makeChar } from './data/defaults'
 import { usePersist } from './hooks/usePersist'
 import CharacterSheet from './components/CharacterSheet'
@@ -7,6 +7,7 @@ import Combat from './components/Combat'
 import VaultAndCodes from './components/VaultAndCodes'
 import Panel from './components/Panel'
 import CampaignPanel from './components/CampaignPanel'
+import ThemeSwitcher from './components/ThemeSwitcher'
 import styles from './App.module.css'
 
 // Static base databases — imported from JSON files
@@ -17,6 +18,12 @@ import BASE_SPELLS    from './data/db_spells.json'
 const PAGES = ['party', 'checks', 'combat', 'vault']
 const PAGE_LABELS = { party: 'Party', checks: 'Skill Checks', combat: 'Combat', vault: 'Vault & Codes' }
 
+const THEME_MAP = {
+  valley:  undefined,       // no data-theme attr = default CSS vars
+  crown:   'crown',
+  pirates: 'pirates',
+}
+
 function blankParty() {
   return Array.from({ length: 4 }, () => makeChar())
 }
@@ -24,6 +31,20 @@ function blankParty() {
 export default function App() {
   const [page, setPage] = useState('party')
   const [activeChar, setActiveChar] = useState(0)
+
+  // Theme — persisted
+  const [theme, setTheme] = useState(() => localStorage.getItem('lkc-theme') || 'valley')
+
+  // Apply theme to document root
+  useEffect(() => {
+    const attr = THEME_MAP[theme]
+    if (attr) {
+      document.documentElement.setAttribute('data-theme', attr)
+    } else {
+      document.documentElement.removeAttribute('data-theme')
+    }
+    localStorage.setItem('lkc-theme', theme)
+  }, [theme])
 
   // Campaign state — persisted
   const [chars, setChars]             = usePersist('lkc-chars', blankParty())
@@ -114,7 +135,6 @@ export default function App() {
       }
     }
     reader.readAsText(file)
-    // Reset input so the same file can be re-loaded if needed
     e.target.value = ''
   }
 
@@ -135,6 +155,9 @@ export default function App() {
 
   return (
     <div className={styles.app}>
+      {/* ── Theme Switcher ── */}
+      <ThemeSwitcher theme={theme} onThemeChange={setTheme} />
+
       {/* ── Header ── */}
       <header className={styles.header}>
         <div className={styles.headerLeft}>
