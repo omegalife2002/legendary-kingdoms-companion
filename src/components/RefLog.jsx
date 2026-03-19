@@ -48,19 +48,20 @@ export default function RefLog({ entries, onChange }) {
             <button className={styles.checkBtn} onClick={() => toggle(e.id)} title="Mark as visited">
               <span className={styles.checkCircle} />
             </button>
-            <input
-              className={styles.refNum}
-              value={e.ref}
-              placeholder="§"
-              onChange={ev => update(e.id, 'ref', ev.target.value)}
-              title="Reference number"
-            />
-            <input
-              className={styles.refNote}
-              value={e.note}
-              placeholder="Note — what's here, why return..."
-              onChange={ev => update(e.id, 'note', ev.target.value)}
-            />
+            <div className={styles.entryFields}>
+              <input
+                className={styles.refNum}
+                value={e.ref}
+                placeholder="Ref #"
+                onChange={ev => update(e.id, 'ref', ev.target.value)}
+              />
+              <input
+                className={styles.refNote}
+                value={e.note}
+                placeholder="Note..."
+                onChange={ev => update(e.id, 'note', ev.target.value)}
+              />
+            </div>
             <button className={styles.removeBtn} onClick={() => remove(e.id)}>✕</button>
           </div>
         ))}
@@ -74,8 +75,10 @@ export default function RefLog({ entries, onChange }) {
                 <button className={styles.checkBtn} onClick={() => toggle(e.id)} title="Unmark">
                   <span className={`${styles.checkCircle} ${styles.checkDone}`}>✓</span>
                 </button>
-                <span className={styles.refNumDone}>{e.ref || '—'}</span>
-                <span className={styles.refNoteDone}>{e.note}</span>
+                <div className={styles.entryFields}>
+                  <span className={styles.refNumDone}>{e.ref || '—'}</span>
+                  <span className={styles.refNoteDone}>{e.note}</span>
+                </div>
                 <button className={styles.removeBtn} onClick={() => remove(e.id)}>✕</button>
               </div>
             ))}

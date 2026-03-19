@@ -8,6 +8,8 @@ import VaultAndCodes from './components/VaultAndCodes'
 import Panel from './components/Panel'
 import CampaignPanel from './components/CampaignPanel'
 import ThemeSwitcher from './components/ThemeSwitcher'
+import RefLog from './components/RefLog'
+import DiceRoller from './components/DiceRoller'
 import styles from './App.module.css'
 
 // Static base databases — imported from JSON files
@@ -209,52 +211,68 @@ export default function App() {
       </header>
 
       {/* ── Main ── */}
-      <main className={styles.main}>
+      <div className={styles.bodyLayout}>
 
-        {/* PARTY */}
-        <div style={{ display: page === 'party' ? 'block' : 'none' }}>
-          <CampaignPanel
-            chars={chars} activeChar={activeChar} setActiveChar={setActiveChar}
-            updateChar={(idx, updated) => setChars(prev => prev.map((c, i) => i === idx ? updated : c))}
-            equipmentDB={equipmentDB} spellDB={spellDB}
-            onAddEquipment={item => setCustomEquipment(prev => [...prev, item])}
-            onAddSpell={item => setCustomSpells(prev => [...prev, item])}
-            armies={armies} onArmiesChange={setArmies}
-            fleet={fleet} onFleetChange={setFleet}
-            notes={campNotes} onNotesChange={setCampNotes}
-          />
-        </div>
+        {/* Left sidebar — Reference Log */}
+        <aside className={styles.leftSidebar}>
+          <div className={styles.sidebarTitle}>§ Ref Log</div>
+          <RefLog entries={refLog} onChange={setRefLog} />
+        </aside>
 
-        {/* SKILL CHECKS */}
-        <div style={{ display: page === 'checks' ? 'block' : 'none' }}>
-          <SkillCheck chars={chars} />
-        </div>
+        {/* Centre — page content */}
+        <main className={styles.main}>
 
-        {/* COMBAT */}
-        <div style={{ display: page === 'combat' ? 'block' : 'none' }}>
-          <Combat
-            chars={chars}
-            onUpdateChars={setChars}
-            enemyDB={enemyDB}
-            onAddEnemy={item => setCustomEnemies(prev => [...prev, item])}
-            armies={armies}
-          />
-        </div>
+          {/* PARTY */}
+          <div style={{ display: page === 'party' ? 'block' : 'none' }}>
+            <CampaignPanel
+              chars={chars} activeChar={activeChar} setActiveChar={setActiveChar}
+              updateChar={(idx, updated) => setChars(prev => prev.map((c, i) => i === idx ? updated : c))}
+              equipmentDB={equipmentDB} spellDB={spellDB}
+              onAddEquipment={item => setCustomEquipment(prev => [...prev, item])}
+              onAddSpell={item => setCustomSpells(prev => [...prev, item])}
+              armies={armies} onArmiesChange={setArmies}
+              fleet={fleet} onFleetChange={setFleet}
+              notes={campNotes} onNotesChange={setCampNotes}
+            />
+          </div>
 
-        {/* VAULT & CODES */}
-        <div style={{ display: page === 'vault' ? 'block' : 'none' }}>
-          <VaultAndCodes
-            items={vaultItems} onItemsChange={setVaultItems}
-            grimoire={grimoire} onGrimoireChange={setGrimoire}
-            codes={codes} onCodesChange={setCodes}
-            equipmentDB={equipmentDB} spellDB={spellDB}
-            onAddEquipment={item => setCustomEquipment(prev => [...prev, item])}
-            onAddSpell={item => setCustomSpells(prev => [...prev, item])}
-            refLog={refLog} onRefLogChange={setRefLog}
-          />
-        </div>
+          {/* SKILL CHECKS */}
+          <div style={{ display: page === 'checks' ? 'block' : 'none' }}>
+            <SkillCheck chars={chars} />
+          </div>
 
-      </main>
+          {/* COMBAT */}
+          <div style={{ display: page === 'combat' ? 'block' : 'none' }}>
+            <Combat
+              chars={chars}
+              onUpdateChars={setChars}
+              enemyDB={enemyDB}
+              onAddEnemy={item => setCustomEnemies(prev => [...prev, item])}
+              armies={armies}
+            />
+          </div>
+
+          {/* VAULT & CODES */}
+          <div style={{ display: page === 'vault' ? 'block' : 'none' }}>
+            <VaultAndCodes
+              items={vaultItems} onItemsChange={setVaultItems}
+              grimoire={grimoire} onGrimoireChange={setGrimoire}
+              codes={codes} onCodesChange={setCodes}
+              equipmentDB={equipmentDB} spellDB={spellDB}
+              onAddEquipment={item => setCustomEquipment(prev => [...prev, item])}
+              onAddSpell={item => setCustomSpells(prev => [...prev, item])}
+            />
+          </div>
+
+        </main>
+
+        {/* Right sidebar — Dice Roller */}
+        <aside className={styles.rightSidebar}>
+          <div className={styles.sidebarTitle}>⚅ Dice</div>
+          <DiceRoller />
+        </aside>
+
+      </div>
     </div>
   )
 }

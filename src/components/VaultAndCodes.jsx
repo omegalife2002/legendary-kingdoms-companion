@@ -1,8 +1,6 @@
 import { useState } from 'react'
 import Panel from './Panel'
 import DatabaseModal from './DatabaseModal'
-import RefLog from './RefLog'
-import DiceRoller from './DiceRoller'
 import styles from './VaultAndCodes.module.css'
 
 const EQ_COLUMNS = [
@@ -44,7 +42,6 @@ export default function VaultAndCodes({
   grimoire, onGrimoireChange,
   equipmentDB, spellDB,
   onAddEquipment, onAddSpell,
-  refLog, onRefLogChange,
 }) {
   const [eqModal, setEqModal] = useState(false)
   const [spellModal, setSpellModal] = useState(false)
@@ -192,16 +189,6 @@ export default function VaultAndCodes({
           ))}
         </div>
       </Panel>
-
-      {/* Bottom row: Ref Log + Dice Roller */}
-      <div className={styles.bottomRow}>
-        <Panel title="Reference Log" ornament="§">
-          <RefLog entries={refLog || []} onChange={onRefLogChange} />
-        </Panel>
-        <Panel title="Dice Roller" ornament="⚅">
-          <DiceRoller />
-        </Panel>
-      </div>
 
     </div>
   )

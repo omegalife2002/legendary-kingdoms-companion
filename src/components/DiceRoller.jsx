@@ -21,7 +21,7 @@ export default function DiceRoller() {
     const total = dice.reduce((a, b) => a + b, 0)
     const entry = { dice, total, count: c, id: Date.now() }
     setResult(entry)
-    setHistory(prev => [entry, ...prev].slice(0, 8))
+    setHistory(prev => [entry, ...prev].slice(0, 6)) // keep 6 so we show 5 after slicing current
   }
 
   function quickRoll(c) {

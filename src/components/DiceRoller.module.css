@@ -1,15 +1,15 @@
-.wrapper { display: flex; flex-direction: column; gap: 10px; }
+.wrapper { display: flex; flex-direction: column; gap: 8px; }
 
 /* Quick presets */
-.presets { display: flex; gap: 6px; }
+.presets { display: flex; gap: 4px; }
 .presetBtn {
   font-family: var(--font-display);
-  font-size: 0.95rem;
+  font-size: 0.8rem;
   font-weight: 600;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   flex: 1;
-  padding: 8px 0;
-  background: var(--parchment-dark);
+  padding: 6px 0;
+  background: var(--parchment);
   border: 1px solid var(--border);
   color: var(--ink-faded);
   cursor: pointer;
@@ -18,14 +18,14 @@
 .presetBtn:hover { background: var(--ink); color: var(--gold-light); border-color: var(--gold); }
 
 /* Custom count */
-.custom { display: flex; align-items: center; gap: 10px; }
-.customControls { display: flex; align-items: center; gap: 8px; flex: 1; }
+.custom { display: flex; align-items: center; gap: 6px; }
+.customControls { display: flex; align-items: center; gap: 5px; flex: 1; }
 .stepBtn {
   font-family: var(--font-display);
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
-  width: 32px;
-  height: 32px;
+  width: 26px;
+  height: 26px;
   background: var(--ink);
   color: var(--gold-light);
   border: none;
@@ -39,22 +39,22 @@
 .stepBtn:hover { background: var(--sepia); }
 .countVal {
   font-family: var(--font-display);
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   font-weight: 600;
   color: var(--ink);
-  min-width: 48px;
+  min-width: 36px;
   text-align: center;
 }
 .rollBtn {
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: 0.85rem;
   font-weight: 600;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   background: var(--ink);
   color: var(--gold-light);
   border: 1px solid var(--gold);
-  padding: 8px 20px;
+  padding: 6px 12px;
   cursor: pointer;
   transition: all 0.15s;
   flex-shrink: 0;
@@ -65,15 +65,15 @@
 .result {
   background: var(--ink);
   border: 1px solid var(--gold);
-  padding: 12px 14px;
+  padding: 10px 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
 }
 .resultTotal {
   font-family: var(--font-display);
-  font-size: 2.8rem;
+  font-size: 2.4rem;
   font-weight: 600;
   color: var(--gold-light);
   line-height: 1;
@@ -81,15 +81,15 @@
 .resultDice {
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
+  gap: 4px;
   justify-content: center;
 }
 .die {
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: 0.85rem;
   font-weight: 600;
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
   border: 1px solid var(--border);
   color: var(--gold-light);
   display: inline-flex;
@@ -97,35 +97,36 @@
   justify-content: center;
 }
 
-/* History */
+/* History — last 5 */
 .history {
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 2px;
   border-top: 1px dashed var(--parchment-deep);
-  padding-top: 6px;
+  padding-top: 5px;
 }
 .historyRow {
   display: flex;
   align-items: center;
-  gap: 8px;
-  opacity: 0.6;
+  gap: 5px;
 }
 .historyLabel {
   font-family: var(--font-display);
-  font-size: 0.78rem;
+  font-size: 0.7rem;
   color: var(--ink-faded);
-  min-width: 28px;
+  min-width: 24px;
+  opacity: 0.7;
 }
 .historyDice {
   font-family: var(--font-body);
-  font-size: 0.85rem;
+  font-size: 0.78rem;
   color: var(--ink-faded);
   flex: 1;
+  opacity: 0.7;
 }
 .historyTotal {
   font-family: var(--font-display);
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   font-weight: 600;
   color: var(--sepia);
 }
