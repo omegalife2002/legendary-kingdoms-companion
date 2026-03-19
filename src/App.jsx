@@ -56,6 +56,7 @@ export default function App() {
   const [armies, setArmies]           = usePersist('lkc-armies', [])
   const [fleet, setFleet]             = usePersist('lkc-fleet', [])
   const [campNotes, setCampNotes]     = usePersist('lkc-notes', '')
+  const [refLog, setRefLog]           = usePersist('lkc-reflog', [])
 
   // Custom database additions — persisted so new entries survive refresh
   const [customEquipment, setCustomEquipment] = usePersist('lkc-db-equipment', [])
@@ -90,6 +91,7 @@ export default function App() {
       armies,
       fleet,
       campNotes,
+      refLog,
       customEquipment,
       customEnemies,
       customSpells,
@@ -125,6 +127,7 @@ export default function App() {
         setArmies(data.armies ?? [])
         setFleet(data.fleet ?? [])
         setCampNotes(data.campNotes ?? '')
+        setRefLog(data.refLog ?? [])
         setCustomEquipment(data.customEquipment ?? [])
         setCustomEnemies(data.customEnemies ?? [])
         setCustomSpells(data.customSpells ?? [])
@@ -149,6 +152,7 @@ export default function App() {
     setArmies([])
     setFleet([])
     setCampNotes('')
+    setRefLog([])
     setActiveChar(0)
     setPage('party')
   }
@@ -246,6 +250,7 @@ export default function App() {
             equipmentDB={equipmentDB} spellDB={spellDB}
             onAddEquipment={item => setCustomEquipment(prev => [...prev, item])}
             onAddSpell={item => setCustomSpells(prev => [...prev, item])}
+            refLog={refLog} onRefLogChange={setRefLog}
           />
         </div>
 

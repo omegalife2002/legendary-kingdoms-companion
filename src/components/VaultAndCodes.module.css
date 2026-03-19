@@ -70,3 +70,10 @@
 .codePip { font-family: var(--font-display); font-size: 0.6rem; aspect-ratio: 1; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(196,169,106,0.35); cursor: pointer; transition: all 0.12s; color: var(--ink-faded); background: var(--parchment-dark); padding: 0; line-height: 1; }
 .codePip:hover:not(.circled) { border-color: var(--sepia); color: var(--sepia); }
 .circled { background: var(--ink); color: var(--gold-light); border-color: var(--gold); }
+
+/* ── Bottom row: Ref Log + Dice Roller ── */
+.bottomRow {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 14px;
+}
